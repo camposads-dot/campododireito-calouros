@@ -69,97 +69,104 @@ const Badge = ({ children }: { children: React.ReactNode }) => (
 // --- Sections ---
 
 const Hero = () => {
-  const feedbacks = [
-    "O melhor material que já vi, salvou meu semestre!",
-    "Linguagem simples e direta. Finalmente entendi Kelsen.",
-    "Comecei do zero e me sinto muito mais segura nas aulas.",
-    "Recomendo para todos os calouros da minha sala.",
-    "O combo valeu cada centavo. Os bônus são incríveis.",
+  const feedbackImages = [
+    "/feedback1.png",
+    "/feedback2.png",
+    "/feedback3.png",
+    "/feedback4.png",
+    "/feedback5.png",
+    "/feedback6.png",
+    "/feedback7.png",
   ];
 
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % feedbacks.length);
-    }, 4000);
-    return () => clearInterval(timer);
-  }, []);
+  const handleScroll = (e: React.UIEvent<HTMLDivElement>) => {
+    const scrollLeft = e.currentTarget.scrollLeft;
+    const width = e.currentTarget.offsetWidth;
+    const index = Math.round(scrollLeft / width);
+    setCurrentSlide(index);
+  };
 
   return (
     <Section className="relative pt-24 md:pt-40 grid lg:grid-cols-2 gap-12 items-center overflow-hidden">
       <div className="absolute top-0 left-1/4 -translate-x-1/2 w-[500px] h-[500px] bg-amber-600/10 blur-[120px] -z-10 rounded-full" />
-      
-      <motion.div 
+
+      {/* LADO ESQUERDO CONTINUA IGUAL */}
+      <motion.div
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8 }}
         className="text-center lg:text-left"
       >
         <Badge>Método Validado por +400 Calouros</Badge>
+
         <h1 className="text-3xl md:text-6xl font-extrabold leading-tight md:leading-tight mb-6">
-          Aprenda o primeiro ano da faculdade de Direito em <span className="text-gold-gradient italic">menos de 30 dias!</span>
+          Aprenda o primeiro ano da faculdade de Direito em{" "}
+          <span className="text-gold-gradient italic">
+            menos de 30 dias!
+          </span>
         </h1>
+
         <p className="text-lg md:text-xl text-zinc-400 mb-8 max-w-xl mx-auto lg:mx-0">
-          Entenda o 1° ano de Direito com o método aprovado por +400 calouros, um método direto e sem juridiquês para quem quer começar o Direito com clareza, segurança e vantagem.
+          Entenda o 1° ano de Direito com o método aprovado por +400
+          calouros, um método direto e sem juridiquês.
         </p>
-        
+
         <div className="space-y-6 flex flex-col items-center lg:items-start">
-          <div className="p-4 rounded-2xl bg-zinc-900/50 border border-zinc-800 inline-block w-full sm:w-auto">
-             <p className="text-zinc-300 font-medium text-sm md:text-base">
-              Garanta hoje seu combo com <span className="text-amber-500 font-bold">85% de desconto + 04 bônus.</span>
-            </p>
-            <p className="text-zinc-500 text-xs md:text-sm">Pagamento único e 7 dias de garantia.</p>
-          </div>
-          
-          <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-            <CTAButton className="flex-1">
-              Garantir combo 1° e 2° Semestre - R$ 47,90
-            </CTAButton>
-            <CTAButton secondary className="flex-1">
-              Apenas 1° Semestre - R$ 27,90
-            </CTAButton>
-          </div>
+          <CTAButton>
+            Garantir combo 1° e 2° Semestre - R$ 47,90
+          </CTAButton>
         </div>
       </motion.div>
 
-      <motion.div 
+      {/* CARD DIREITO ALTERADO */}
+      <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, delay: 0.2 }}
         className="relative group"
       >
-        <div className="absolute -inset-1 bg-gradient-to-r from-amber-600 to-amber-400 rounded-3xl blur opacity-20 group-hover:opacity-30 transition duration-1000"></div>
-        <div className="relative bg-zinc-900 border border-zinc-800 rounded-3xl p-6 md:p-8 min-h-[300px] md:min-h-[400px] flex flex-col justify-center items-center text-center overflow-hidden">
-          <div className="absolute top-4 left-4 flex gap-1">
-            {[1,2,3,4,5].map(i => <Star key={i} size={14} className="text-amber-500 fill-amber-500" />)}
+        <div className="absolute -inset-1 bg-gradient-to-r from-amber-600 to-amber-400 rounded-3xl blur opacity-20"></div>
+
+        <div className="relative bg-zinc-900 border border-zinc-800 rounded-3xl p-6 md:p-8 min-h-[300px] md:min-h-[400px] overflow-hidden">
+
+          {/* TITULO NO LUGAR DAS ESTRELAS */}
+          <div className="absolute top-4 left-6">
+            <h3 className="text-amber-500 font-bold tracking-wide text-sm md:text-base">
+              Feedback Real:
+            </h3>
           </div>
-          
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={currentSlide}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.5 }}
-              className="max-w-xs px-4"
-            >
-              <div className="mb-4 md:mb-6 inline-flex items-center justify-center w-12 h-12 md:w-16 md:h-16 rounded-full bg-zinc-800 border border-zinc-700">
-                <User size={24} className="text-zinc-400" />
+
+          {/* SLIDER MANUAL */}
+          <div
+            onScroll={handleScroll}
+            className="mt-10 flex overflow-x-auto snap-x snap-mandatory scroll-smooth scrollbar-hide"
+          >
+            {feedbackImages.map((img, i) => (
+              <div
+                key={i}
+                className="min-w-full snap-center flex justify-center items-center px-2"
+              >
+                <img
+                  src={img}
+                  alt={`Feedback ${i + 1}`}
+                  className="rounded-2xl object-cover max-h-[270px] md:max-h-[320px] border border-zinc-800"
+                />
               </div>
-              <blockquote className="text-xl md:text-2xl font-display font-medium text-zinc-100 mb-4 italic">
-                "{feedbacks[currentSlide]}"
-              </blockquote>
-              <p className="text-zinc-500 text-xs md:text-sm font-medium">Estudante de Direito • Feedback Real</p>
-            </motion.div>
-          </AnimatePresence>
-          
-          <div className="absolute bottom-8 flex gap-2">
-            {feedbacks.map((_, i) => (
-              <button 
-                key={i} 
-                onClick={() => setCurrentSlide(i)}
-                className={`w-2 h-2 rounded-full transition-all duration-300 ${currentSlide === i ? "bg-amber-500 w-6" : "bg-zinc-700"}`}
+            ))}
+          </div>
+
+          {/* BOLINHAS EMBAIXO */}
+          <div className="absolute bottom-8 left-0 right-0 flex justify-center gap-2">
+            {feedbackImages.map((_, i) => (
+              <div
+                key={i}
+                className={`h-2 rounded-full transition-all duration-300 ${
+                  currentSlide === i
+                    ? "bg-amber-500 w-6"
+                    : "bg-zinc-700 w-2"
+                }`}
               />
             ))}
           </div>
