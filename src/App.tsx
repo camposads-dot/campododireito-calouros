@@ -518,50 +518,98 @@ const TargetAudience = () => {
 
 const ProductPreview = () => {
   const isMobile = useIsMobile();
-  const previewImages = Array.from({ length: 5 }, (_, i) => ({
-    url: `https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=600&sig=${i}`,
-    title: `Módulo ${i + 1}: Domínio Prático`
-  }));
+
+  const previewImages = [
+    {
+      url: "/associacaocodigo.jpg",
+      title: "Associação com o Código",
+    },
+    {
+      url: "/espacodenotas.jpg",
+      title: "Espaço de Notas",
+    },
+    {
+      url: "/planodeestudo.jpg",
+      title: "Plano de Estudo",
+    },
+    {
+      url: "/simulado.jpg",
+      title: "Simulado de Prova",
+    },
+    {
+      url: "/sumariointerativo.jpg",
+      title: "Sumário Interativo",
+    },
+  ];
+
+  const reviews = [
+    {
+      title: "Review E-book 1",
+      link: "https://youtu.be/0esmfaCBjOI?si=j3qFHvWkp00ikSYm",
+    },
+    {
+      title: "Review E-book 2",
+      link: "https://youtu.be/pzQFMvp9LRk?si=FMlPi-47K8czzgg1",
+    },
+  ];
 
   return (
     <Section className="bg-zinc-950">
+      {/* CARROSSEL DAS FOTOS */}
       <div className="mb-12 overflow-hidden">
-        <motion.div 
+        <motion.div
           className="flex gap-4 w-max"
           animate={{ x: ["0%", "-50%"] }}
-          transition={{ 
+          transition={{
             duration: isMobile ? 12 : 35,
             repeat: Infinity,
             ease: "linear",
-            repeatType: "loop"
+            repeatType: "loop",
           }}
         >
           {[...previewImages, ...previewImages].map((img, i) => (
             <div key={i} className="flex-shrink-0 w-80 text-center">
-              <p className="text-amber-500 text-xs font-bold uppercase mb-4 tracking-widest">{img.title}</p>
+              <p className="text-amber-500 text-xs font-bold uppercase mb-4 tracking-widest">
+                {img.title}
+              </p>
+
               <div className="rounded-2xl border border-zinc-800 overflow-hidden aspect-[3/4] bg-zinc-900 shadow-2xl">
-                <img src={img.url} alt="E-book preview" className="w-full h-full object-cover" />
+                <img
+                  src={img.url}
+                  alt={img.title}
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
           ))}
         </motion.div>
       </div>
-      
+
+      {/* REVIEWS YOUTUBE */}
       <div className="grid sm:grid-cols-2 gap-8 max-w-4xl mx-auto">
-        {[1, 2].map(i => (
-          <div key={i} className="aspect-video bg-zinc-900 rounded-3xl border border-zinc-800 flex items-center justify-center group cursor-pointer relative overflow-hidden">
+        {reviews.map((video, i) => (
+          <a
+            key={i}
+            href={video.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="aspect-video bg-zinc-900 rounded-3xl border border-zinc-800 flex items-center justify-center group cursor-pointer relative overflow-hidden"
+          >
             <div className="absolute inset-0 bg-zinc-950/40 group-hover:bg-transparent transition-colors z-10" />
+
             <div className="w-16 h-16 rounded-full bg-amber-500 text-zinc-950 flex items-center justify-center z-20 group-hover:scale-110 transition-transform">
               <Zap size={32} />
             </div>
-            <p className="absolute bottom-6 z-20 font-bold text-amber-500">Review E-book {i}</p>
-          </div>
+
+            <p className="absolute bottom-6 z-20 font-bold text-amber-500">
+              {video.title}
+            </p>
+          </a>
         ))}
       </div>
     </Section>
   );
 };
-
 const Offer = () => {
   return (
     <Section id="pricing" className="relative">
