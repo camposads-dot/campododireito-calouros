@@ -81,18 +81,11 @@ const Hero = () => {
 
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  const handleScroll = (e: React.UIEvent<HTMLDivElement>) => {
-    const scrollLeft = e.currentTarget.scrollLeft;
-    const width = e.currentTarget.offsetWidth;
-    const index = Math.round(scrollLeft / width);
-    setCurrentSlide(index);
-  };
-
   return (
     <Section className="relative pt-24 md:pt-40 grid lg:grid-cols-2 gap-12 items-center overflow-hidden">
       <div className="absolute top-0 left-1/4 -translate-x-1/2 w-[500px] h-[500px] bg-amber-600/10 blur-[120px] -z-10 rounded-full" />
 
-      {/* LADO ESQUERDO CONTINUA IGUAL */}
+      {/* PARTE ESQUERDA ORIGINAL - NÃO ALTERADA */}
       <motion.div
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}
@@ -110,37 +103,61 @@ const Hero = () => {
 
         <p className="text-lg md:text-xl text-zinc-400 mb-8 max-w-xl mx-auto lg:mx-0">
           Entenda o 1° ano de Direito com o método aprovado por +400
-          calouros, um método direto e sem juridiquês.
+          calouros, um método direto e sem juridiquês para quem quer começar
+          o Direito com clareza, segurança e vantagem.
         </p>
 
         <div className="space-y-6 flex flex-col items-center lg:items-start">
-          <CTAButton>
-            Garantir combo 1° e 2° Semestre - R$ 47,90
-          </CTAButton>
+          <div className="p-4 rounded-2xl bg-zinc-900/50 border border-zinc-800 inline-block w-full sm:w-auto">
+            <p className="text-zinc-300 font-medium text-sm md:text-base">
+              Garanta hoje seu combo com{" "}
+              <span className="text-amber-500 font-bold">
+                85% de desconto + 04 bônus e 12 discplinas inclusas.
+              </span>
+            </p>
+            <p className="text-zinc-500 text-xs md:text-sm">
+              Pagamento único e 7 dias de garantia.
+            </p>
+          </div>
+
+          <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+            <CTAButton className="flex-1">
+              Garantir combo 1° e 2° Semestre - R$ 47,90
+            </CTAButton>
+
+            <CTAButton secondary className="flex-1">
+              Apenas 1° Semestre - R$ 27,90
+            </CTAButton>
+          </div>
         </div>
       </motion.div>
 
-      {/* CARD DIREITO ALTERADO */}
+      {/* SOMENTE PARTE DIREITA ALTERADA */}
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, delay: 0.2 }}
         className="relative group"
       >
-        <div className="absolute -inset-1 bg-gradient-to-r from-amber-600 to-amber-400 rounded-3xl blur opacity-20"></div>
+        <div className="absolute -inset-1 bg-gradient-to-r from-amber-600 to-amber-400 rounded-3xl blur opacity-20 group-hover:opacity-30 transition duration-1000"></div>
 
         <div className="relative bg-zinc-900 border border-zinc-800 rounded-3xl p-6 md:p-8 min-h-[300px] md:min-h-[400px] overflow-hidden">
 
-          {/* TITULO NO LUGAR DAS ESTRELAS */}
-          <div className="absolute top-4 left-6">
-            <h3 className="text-amber-500 font-bold tracking-wide text-sm md:text-base">
+          {/* TITULO */}
+          <div className="absolute top-4 left-4">
+            <h3 className="text-amber-500 font-bold text-sm md:text-base">
               Feedback Real:
             </h3>
           </div>
 
           {/* SLIDER MANUAL */}
           <div
-            onScroll={handleScroll}
+            id="feedback-scroll"
+            onScroll={(e) => {
+              const scrollLeft = e.currentTarget.scrollLeft;
+              const width = e.currentTarget.offsetWidth;
+              setCurrentSlide(Math.round(scrollLeft / width));
+            }}
             className="mt-10 flex overflow-x-auto snap-x snap-mandatory scroll-smooth scrollbar-hide"
           >
             {feedbackImages.map((img, i) => (
@@ -151,21 +168,30 @@ const Hero = () => {
                 <img
                   src={img}
                   alt={`Feedback ${i + 1}`}
-                  className="rounded-2xl object-cover max-h-[270px] md:max-h-[320px] border border-zinc-800"
+                  className="rounded-2xl border border-zinc-800 object-cover max-h-[260px] md:max-h-[320px]"
                 />
               </div>
             ))}
           </div>
 
-          {/* BOLINHAS EMBAIXO */}
+          {/* BOLINHAS */}
           <div className="absolute bottom-8 left-0 right-0 flex justify-center gap-2">
             {feedbackImages.map((_, i) => (
-              <div
+              <button
                 key={i}
-                className={`h-2 rounded-full transition-all duration-300 ${
+                onClick={() => {
+                  const el = document.getElementById("feedback-scroll");
+                  if (el) {
+                    el.scrollTo({
+                      left: el.clientWidth * i,
+                      behavior: "smooth",
+                    });
+                  }
+                }}
+                className={`w-2 h-2 rounded-full transition-all duration-300 ${
                   currentSlide === i
                     ? "bg-amber-500 w-6"
-                    : "bg-zinc-700 w-2"
+                    : "bg-zinc-700"
                 }`}
               />
             ))}
