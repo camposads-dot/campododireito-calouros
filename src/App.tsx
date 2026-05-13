@@ -69,60 +69,53 @@ const Badge = ({ children }: { children: React.ReactNode }) => (
 // --- Sections ---
 
 const Hero = () => {
-  const feedbackImages = [
-    "/feedbacks/1.png",
-    "/feedbacks/2.png",
-    "/feedbacks/3.png",
-    "/feedbacks/4.png",
-    "/feedbacks/5.png",
-    "/feedbacks/6.png",
-    "/feedbacks/7.png",
+  const feedbacks = [
+    "O melhor material que já vi, salvou meu semestre!",
+    "Linguagem simples e direta. Finalmente entendi Kelsen.",
+    "Comecei do zero e me sinto muito mais segura nas aulas.",
+    "Recomendo para todos os calouros da minha sala.",
+    "O combo valeu cada centavo. Os bônus são incríveis.",
   ];
+
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % feedbacks.length);
+    }, 4000);
+    return () => clearInterval(timer);
+  }, []);
 
   return (
     <Section className="relative pt-24 md:pt-40 grid lg:grid-cols-2 gap-12 items-center overflow-hidden">
       <div className="absolute top-0 left-1/4 -translate-x-1/2 w-[500px] h-[500px] bg-amber-600/10 blur-[120px] -z-10 rounded-full" />
-
-      {/* TEXTO ESQUERDA */}
-      <motion.div
+      
+      <motion.div 
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8 }}
         className="text-center lg:text-left"
       >
         <Badge>Método Validado por +400 Calouros</Badge>
-
         <h1 className="text-3xl md:text-6xl font-extrabold leading-tight md:leading-tight mb-6">
-          Aprenda o primeiro ano da faculdade de Direito em{" "}
-          <span className="text-gold-gradient italic">
-            menos de 30 dias!
-          </span>
+          Aprenda o primeiro ano da faculdade de Direito em <span className="text-gold-gradient italic">menos de 30 dias!</span>
         </h1>
-
         <p className="text-lg md:text-xl text-zinc-400 mb-8 max-w-xl mx-auto lg:mx-0">
-          Entenda o 1° ano de Direito com o método aprovado por +400
-          calouros, um método direto e sem juridiquês para quem quer começar
-          o Direito com clareza, segurança e vantagem.
+          Entenda o 1° ano de Direito com o método aprovado por +400 calouros, um método direto e sem juridiquês para quem quer começar o Direito com clareza, segurança e vantagem.
         </p>
-
+        
         <div className="space-y-6 flex flex-col items-center lg:items-start">
           <div className="p-4 rounded-2xl bg-zinc-900/50 border border-zinc-800 inline-block w-full sm:w-auto">
-            <p className="text-zinc-300 font-medium text-sm md:text-base">
-              Garanta hoje seu combo com{" "}
-              <span className="text-amber-500 font-bold">
-                85% de desconto + 04 bônus.
-              </span>
+             <p className="text-zinc-300 font-medium text-sm md:text-base">
+              Garanta hoje seu combo com <span className="text-amber-500 font-bold">85% de desconto + 04 bônus.</span>
             </p>
-            <p className="text-zinc-500 text-xs md:text-sm">
-              Pagamento único e 7 dias de garantia.
-            </p>
+            <p className="text-zinc-500 text-xs md:text-sm">Pagamento único e 7 dias de garantia.</p>
           </div>
-
+          
           <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
             <CTAButton className="flex-1">
               Garantir combo 1° e 2° Semestre - R$ 47,90
             </CTAButton>
-
             <CTAButton secondary className="flex-1">
               Apenas 1° Semestre - R$ 27,90
             </CTAButton>
@@ -130,44 +123,46 @@ const Hero = () => {
         </div>
       </motion.div>
 
-      {/* CARD FEEDBACK */}
-      <motion.div
+      <motion.div 
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, delay: 0.2 }}
         className="relative group"
       >
         <div className="absolute -inset-1 bg-gradient-to-r from-amber-600 to-amber-400 rounded-3xl blur opacity-20 group-hover:opacity-30 transition duration-1000"></div>
-
-        <div className="relative bg-zinc-900 border border-zinc-800 rounded-3xl p-6 md:p-8 min-h-[320px] md:min-h-[420px] overflow-hidden">
-
-          {/* TITULO */}
-          <div className="absolute top-5 left-6">
-            <h3 className="text-amber-500 font-semibold tracking-wide text-sm md:text-base">
-              Feedback Real:
-            </h3>
+        <div className="relative bg-zinc-900 border border-zinc-800 rounded-3xl p-6 md:p-8 min-h-[300px] md:min-h-[400px] flex flex-col justify-center items-center text-center overflow-hidden">
+          <div className="absolute top-4 left-4 flex gap-1">
+            {[1,2,3,4,5].map(i => <Star key={i} size={14} className="text-amber-500 fill-amber-500" />)}
           </div>
-
-          {/* CARROSSEL MANUAL */}
-          <div className="mt-10 h-full overflow-x-auto scrollbar-hide snap-x snap-mandatory flex gap-4 pb-4 px-1">
-            {feedbackImages.map((img, index) => (
-              <div
-                key={index}
-                className="min-w-full snap-center flex justify-center items-center"
-              >
-                <img
-                  src={img}
-                  alt={`Feedback ${index + 1}`}
-                  className="rounded-2xl border border-zinc-800 object-cover max-h-[300px] md:max-h-[340px] shadow-xl"
-                />
+          
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={currentSlide}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.5 }}
+              className="max-w-xs px-4"
+            >
+              <div className="mb-4 md:mb-6 inline-flex items-center justify-center w-12 h-12 md:w-16 md:h-16 rounded-full bg-zinc-800 border border-zinc-700">
+                <User size={24} className="text-zinc-400" />
               </div>
+              <blockquote className="text-xl md:text-2xl font-display font-medium text-zinc-100 mb-4 italic">
+                "{feedbacks[currentSlide]}"
+              </blockquote>
+              <p className="text-zinc-500 text-xs md:text-sm font-medium">Estudante de Direito • Feedback Real</p>
+            </motion.div>
+          </AnimatePresence>
+          
+          <div className="absolute bottom-8 flex gap-2">
+            {feedbacks.map((_, i) => (
+              <button 
+                key={i} 
+                onClick={() => setCurrentSlide(i)}
+                className={`w-2 h-2 rounded-full transition-all duration-300 ${currentSlide === i ? "bg-amber-500 w-6" : "bg-zinc-700"}`}
+              />
             ))}
           </div>
-
-          {/* TEXTO AUXILIAR */}
-          <p className="absolute bottom-4 left-0 right-0 text-center text-zinc-500 text-xs md:text-sm">
-            Arraste para o lado →
-          </p>
         </div>
       </motion.div>
     </Section>
