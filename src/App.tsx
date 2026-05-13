@@ -146,7 +146,7 @@ const Hero = () => {
           {/* TITULO */}
           <div className="absolute top-4 left-4">
             <h3 className="text-amber-500 font-bold text-sm md:text-base">
-              Feedback Real:
+              Arraste para o lado e veja os Feedbacks Reais:
             </h3>
           </div>
 
@@ -380,37 +380,91 @@ const Bonuses = () => {
 };
 
 const SocialProof = () => {
-  const images = Array.from({ length: 7 }, (_, i) => `https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=400&h=600&sig=${i}`);
+  const feedbacks = [
+    {
+      image: "/feedback1.png",
+      text: "Comprei o e-book dele e estou amando, estou mais segura para iniciar, já estou matriculada!",
+    },
+    {
+      image: "/feedback2.png",
+      text: "Eu to adorando o E-book.",
+    },
+    {
+      image: "/feedback3.png",
+      text: "Material incrível! Já estou estudando por ele",
+    },
+    {
+      image: "/feedback4.png",
+      text: "Obrigada Natan, e eu adorei o ebook, é bem detalhado, principalmente para mim que estou começando agora na faculdade, vai ajudar bastante!",
+    },
+    {
+      image: "/feedback5.png",
+      text: "Comprei, realmente bem resumido",
+    },
+    {
+      image: "/feedback6.png",
+      text: "Gostei do material! Já adquiri",
+    },
+    {
+      image: "/feedback7.png",
+      text: "Fala meu amigo, boa tarde, já consegui e muito obrigado. Excelente conteúdo!",
+    },
+  ];
+
   const isMobile = useIsMobile();
 
   return (
     <Section className="overflow-hidden">
       <div className="text-center mb-16">
         <Badge>O que dizem</Badge>
-        <h2 className="text-3xl md:text-5xl font-bold mb-4">O QUE OS CALOUROS ACHAM DO MATERIAL?</h2>
-        <p className="text-zinc-500">Veja o feedback real de estudantes que já começaram a estudar com o material.</p>
+
+        <h2 className="text-3xl md:text-5xl font-bold mb-4">
+          O QUE OS CALOUROS ACHAM DO MATERIAL?
+        </h2>
+
+        <p className="text-zinc-500">
+          Veja o feedback real de estudantes que já começaram a estudar com o material.
+        </p>
       </div>
-      
+
       <div className="relative">
-        <motion.div 
+        <motion.div
           className="flex gap-4 w-max"
           animate={{ x: ["0%", "-50%"] }}
-          transition={{ 
+          transition={{
             duration: isMobile ? 15 : 45,
             repeat: Infinity,
             ease: "linear",
-            repeatType: "loop"
+            repeatType: "loop",
           }}
         >
-          {[...images, ...images].map((src, i) => (
-            <div key={i} className="flex-shrink-0 w-64 md:w-80 h-[450px] bg-zinc-900 rounded-2xl border border-zinc-800 overflow-hidden relative group">
-              <img src={src} alt="Feedback" className="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity grayscale group-hover:grayscale-0" />
-              <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-transparent opacity-60"></div>
+          {[...feedbacks, ...feedbacks].map((item, i) => (
+            <div
+              key={i}
+              className="flex-shrink-0 w-64 md:w-80 h-[450px] bg-zinc-900 rounded-2xl border border-zinc-800 overflow-hidden relative group"
+            >
+              <img
+                src={item.image}
+                alt="Feedback"
+                className="w-full h-full object-cover"
+              />
+
+              <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/20 to-transparent"></div>
+
               <div className="absolute bottom-4 left-4 right-4">
                 <div className="flex gap-1 mb-2">
-                  {[1,2,3,4,5].map(i => <Star key={i} size={12} className="text-amber-500 fill-amber-500" />)}
+                  {[1, 2, 3, 4, 5].map((star) => (
+                    <Star
+                      key={star}
+                      size={12}
+                      className="text-amber-500 fill-amber-500"
+                    />
+                  ))}
                 </div>
-                <p className="text-xs text-zinc-300 font-medium">"Conteúdo incrível que transformou meu entendimento do Direito."</p>
+
+                <p className="text-xs md:text-sm text-white font-semibold italic leading-relaxed">
+                  "{item.text}"
+                </p>
               </div>
             </div>
           ))}
