@@ -804,16 +804,31 @@ const Footer = () => {
 
 export default function App() {
   return (
-    <div className="selection:bg-amber-500 selection:text-zinc-950">
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-zinc-950/80 backdrop-blur-md border-b border-zinc-900 px-6 py-4">
+    <div className="selection:bg-amber-500 selection:text-zinc-950 overflow-x-hidden max-w-full">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-zinc-950/80 backdrop-blur-md border-b border-zinc-900 px-4 md:px-6 py-4 overflow-x-hidden">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
-          <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-amber-500 rounded-lg flex items-center justify-center text-zinc-950 font-black italic">D</div>
-            <span className="text-lg font-black tracking-tighter hidden sm:block">DIREITO SIMPLIFICADO</span>
+          <div className="flex items-center gap-2 min-w-0">
+            <div className="w-8 h-8 bg-amber-500 rounded-lg flex items-center justify-center text-zinc-950 font-black italic shrink-0">
+              D
+            </div>
+
+            <span className="text-lg font-black tracking-tighter hidden sm:block truncate">
+              DIREITO SIMPLIFICADO
+            </span>
           </div>
-          <div className="flex items-center gap-4">
-            <a href="#faq" className="text-sm font-bold text-zinc-500 hover:text-zinc-300 transition-colors">Dúvidas?</a>
-            <CTAButton href="#pricing" className="px-6 py-2 text-sm rounded-lg">
+
+          <div className="flex items-center gap-2 md:gap-4">
+            <a
+              href="#faq"
+              className="text-sm font-bold text-zinc-500 hover:text-zinc-300 transition-colors hidden sm:block"
+            >
+              Dúvidas?
+            </a>
+
+            <CTAButton
+              href="#pricing"
+              className="px-4 md:px-6 py-2 text-xs md:text-sm rounded-lg whitespace-nowrap"
+            >
               Comprar Agora
             </CTAButton>
           </div>
@@ -838,4 +853,3 @@ export default function App() {
     </div>
   );
 }
-
