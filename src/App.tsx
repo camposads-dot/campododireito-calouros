@@ -110,14 +110,14 @@ const Hero = () => {
           </span>
         </h1>
 
-        <p className="text-base md:text-lg text-zinc-400 mb-6 max-w-xl mx-auto lg:mx-0 text-justify leading-relaxed">
+        <p className="text-lg md:text-xl text-zinc-400 mb-8 max-w-xl mx-auto lg:mx-0">
   Entenda o 1° ano de Direito com o método aprovado por +400
   calouros, um método direto e sem juridiquês para quem quer começar
   o Direito com clareza, segurança e vantagem.
 </p>
 
 {/* DISCIPLINAS */}
-<div className="flex flex-wrap gap-1.5 mb-6 max-w-xl mx-auto lg:mx-0">
+<div className="flex flex-wrap justify-center lg:justify-start gap-1.5 mb-6 max-w-xl mx-auto">
   {[
     "Introdução ao Estudo do Direito",
     "Ciências Políticas",
