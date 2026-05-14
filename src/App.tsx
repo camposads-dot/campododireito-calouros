@@ -112,7 +112,7 @@ const Hero = () => {
             <p className="text-zinc-300 font-medium text-sm md:text-base">
               Garanta hoje seu combo com{" "}
               <span className="text-amber-500 font-bold">
-                85% de desconto + 04 bônus e 12 discplinas inclusas.
+                85% de desconto + 04 bônus e 12 disciplinas inclusas.
               </span>
             </p>
             <p className="text-zinc-500 text-xs md:text-sm">
@@ -521,34 +521,34 @@ const ProductPreview = () => {
 
   const previewImages = [
     {
-      url: "/associacaocodigo.png",
+      url: "/associacaocodigo.jpg",
       title: "Associação com o Código",
     },
     {
-      url: "/espacodenotas.png",
+      url: "/espacodenotas.jpg",
       title: "Espaço de Notas",
     },
     {
-      url: "/planodeestudo.png",
+      url: "/planodeestudo.jpg",
       title: "Plano de Estudo",
     },
     {
-      url: "/simulado.png",
+      url: "/simulado.jpg",
       title: "Simulado de Prova",
     },
     {
-      url: "/sumariointerativo.png",
+      url: "/sumariointerativo.jpg",
       title: "Sumário Interativo",
     },
   ];
 
   const reviews = [
     {
-      title: "Review E-book 1",
+      title: "Conheça o E-Book 01",
       embed: "https://www.youtube.com/embed/0esmfaCBjOI",
     },
     {
-      title: "Review E-book 2",
+      title: "Conheça o E-Book 02",
       embed: "https://www.youtube.com/embed/pzQFMvp9LRk",
     },
   ];
@@ -588,24 +588,26 @@ const ProductPreview = () => {
       {/* Reviews em vídeo */}
       <div className="grid sm:grid-cols-2 gap-8 max-w-4xl mx-auto">
         {reviews.map((review, i) => (
-          <div
-            key={i}
-            className="aspect-video bg-zinc-900 rounded-3xl border border-zinc-800 overflow-hidden shadow-xl"
-          >
-            <iframe
-              className="w-full h-full"
-              src={review.embed}
-              title={review.title}
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
+          <div key={i} className="text-center">
+            <p className="text-amber-500 text-xs font-bold uppercase mb-4 tracking-widest">
+              {review.title}
+            </p>
+
+            <div className="aspect-video bg-zinc-900 rounded-3xl border border-zinc-800 overflow-hidden shadow-xl">
+              <iframe
+                className="w-full h-full"
+                src={review.embed}
+                title={review.title}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
           </div>
         ))}
       </div>
     </Section>
   );
 };
-
 const Offer = () => {
   return (
     <Section id="pricing" className="relative">
@@ -884,10 +886,10 @@ const Biography = () => {
         <div className="relative aspect-square rounded-[60px] overflow-hidden bg-zinc-800 border-4 border-amber-500/20 max-w-md mx-auto">
           <div className="w-40 h-40 md:w-56 md:h-56 rounded-full overflow-hidden">
   <img
-    src="/perfil.png"
-    alt="Natan Campos"
-    className="w-full h-full object-cover object-center"
-  />
+  src="/perfil.png"
+  alt="Natan Campos"
+  className="w-full h-full object-cover"
+/>
 </div>
           <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-transparent"></div>
           <div className="absolute bottom-8 left-8">
