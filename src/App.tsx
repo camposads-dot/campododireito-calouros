@@ -111,10 +111,34 @@ const Hero = () => {
         </h1>
 
         <p className="text-lg md:text-xl text-zinc-400 mb-8 max-w-xl mx-auto lg:mx-0">
-          Entenda o 1° ano de Direito com o método aprovado por +400
-          calouros, um método direto e sem juridiquês para quem quer começar
-          o Direito com clareza, segurança e vantagem.
-        </p>
+  Entenda o 1° ano de Direito com o método aprovado por +400
+  calouros, um método direto e sem juridiquês para quem quer começar
+  o Direito com clareza, segurança e vantagem.
+</p>
+
+{/* DISCIPLINAS */}
+<div className="flex flex-wrap gap-2 mb-8 max-w-xl mx-auto lg:mx-0">
+  {[
+    "Introdução ao Estudo do Direito",
+    "Ciência Políticas, Estado e Constituição",
+    "Filosofia",
+    "Criminologia",
+    "Antropologia, Sociologia e Direito",
+    "História do Direito",
+    "Direito Civil I (Parte Geral)",
+    "Direito Penal I (Parte Geral)",
+    "Direito Constitucional I",
+    "Teoria Geral do Processo",
+    "Hermenêutica Jurídica",
+  ].map((item, i) => (
+    <span
+      key={i}
+      className="px-3 py-1 rounded-full bg-zinc-900 border border-zinc-800 text-zinc-400 text-xs md:text-sm hover:border-amber-500/40 transition"
+    >
+      {item}
+    </span>
+  ))}
+</div>
 
         <div className="space-y-6 flex flex-col items-center lg:items-start">
           <div className="p-4 rounded-2xl bg-zinc-900/50 border border-zinc-800 inline-block w-full sm:w-auto">
