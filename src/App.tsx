@@ -543,15 +543,15 @@ const ProductPreview = () => {
   ];
 
   const reviews = [
-    {
-      title: "Review E-book 1",
-      link: "https://youtu.be/0esmfaCBjOI?si=j3qFHvWkp00ikSYm",
-    },
-    {
-      title: "Review E-book 2",
-      link: "https://youtu.be/pzQFMvp9LRk?si=FMlPi-47K8czzgg1",
-    },
-  ];
+  {
+    title: "Review E-book 1",
+    embed: "https://www.youtube.com/embed/0esmfaCBjOI",
+  },
+  {
+    title: "Review E-book 2",
+    embed: "https://www.youtube.com/embed/pzQFMvp9LRk",
+  },
+];
 
   return (
     <Section className="bg-zinc-950">
@@ -646,9 +646,13 @@ const Offer = () => {
             </ul>
           </div>
           
-          <CTAButton secondary className="w-full">
-            COMPRAR INDIVIDUAL
-          </CTAButton>
+          <CTAButton
+  secondary
+  href="https://pay.cakto.com.br/mecgdur"
+  className="w-full"
+>
+  COMPRAR INDIVIDUAL
+</CTAButton>
         </div>
 
         {/* Combo */}
@@ -681,9 +685,7 @@ const Offer = () => {
             </div>
           </div>
           
-          <CTAButton className="w-full text-lg md:text-xl py-5 md:py-6">
-            GARANTIR COMBO COMPLETO
-          </CTAButton>
+          <CTAButton  href="https://pay.cakto.com.br/33wuu35"  className="w-full text-lg md:text-xl py-5 md:py-6">  GARANTIR COMBO COMPLETO</CTAButton>
           
           <p className="text-center text-[8px] md:text-[10px] text-zinc-500 mt-4 uppercase font-bold tracking-widest">Oferta por tempo limitado</p>
         </div>
@@ -884,11 +886,15 @@ const Biography = () => {
     <Section className="bg-zinc-900/40 rounded-[50px]">
       <div className="grid lg:grid-cols-2 gap-12 md:gap-20 items-center">
         <div className="relative aspect-square rounded-[60px] overflow-hidden bg-zinc-800 border-4 border-amber-500/20 max-w-md mx-auto">
-          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=800" alt="Natan Campos" className="w-full h-full object-cover" />
+          <img
+  src="/perfil.png"
+  alt="Natan Campos"
+  className="w-full h-full object-cover"
+/>
           <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-transparent"></div>
           <div className="absolute bottom-8 left-8">
             <h3 className="text-3xl font-black text-white">Natan Campos</h3>
-            <p className="text-amber-500 font-bold uppercase tracking-widest text-xs">Fundador do Direito Simplificado</p>
+            <p className="text-amber-500 font-bold uppercase tracking-widest text-xs">Mentor e Veterano em Direito</p>
           </div>
         </div>
         
@@ -910,10 +916,15 @@ const Biography = () => {
               <p className="text-[10px] md:text-xs text-zinc-500 uppercase font-bold tracking-widest leading-none">Alunos Satisfeitos</p>
             </div>
             <div className="p-5 md:p-6 rounded-3xl bg-zinc-950/50 border border-zinc-800 text-center">
-              <div className="flex items-center justify-center gap-2 mb-1">
-                <Instagram size={18} className="text-amber-500" />
-                <p className="text-sm md:text-base font-bold">@nataneodireito</p>
-              </div>
+              <a
+  href="https://instagram.com/nataneodireito"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="flex items-center justify-center gap-2 mb-1 hover:text-amber-500 transition-colors"
+>
+  <Instagram size={18} className="text-amber-500" />
+  <p className="text-sm md:text-base font-bold">@nataneodireito</p>
+</a>
               <p className="text-[10px] md:text-xs text-zinc-500 uppercase font-bold tracking-widest leading-none">Me siga no Instagram</p>
             </div>
           </div>
