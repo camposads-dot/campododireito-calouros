@@ -79,13 +79,22 @@ const Hero = () => {
     "/feedback7.png",
   ];
 
+  const ebookImages = [
+    "/associacaocodigo.jpg",
+    "/espacodenotas.jpg",
+    "/planodeestudo.jpg",
+    "/simulado.jpg",
+    "/sumariointerativo.jpg",
+  ];
+
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [currentPreview, setCurrentPreview] = useState(0);
 
   return (
     <Section className="relative pt-24 md:pt-40 grid lg:grid-cols-2 gap-12 items-center overflow-hidden">
       <div className="absolute top-0 left-1/4 -translate-x-1/2 w-[500px] h-[500px] bg-amber-600/10 blur-[120px] -z-10 rounded-full" />
 
-      {/* PARTE ESQUERDA ORIGINAL - NÃO ALTERADA */}
+      {/* ESQUERDA */}
       <motion.div
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}
@@ -115,6 +124,7 @@ const Hero = () => {
                 85% de desconto + 04 bônus e 12 disciplinas inclusas.
               </span>
             </p>
+
             <p className="text-zinc-500 text-xs md:text-sm">
               Pagamento único e 7 dias de garantia.
             </p>
@@ -132,25 +142,19 @@ const Hero = () => {
         </div>
       </motion.div>
 
-      {/* SOMENTE PARTE DIREITA ALTERADA */}
+      {/* DIREITA */}
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, delay: 0.2 }}
-        className="relative group"
+        className="relative space-y-8"
       >
-        <div className="absolute -inset-1 bg-gradient-to-r from-amber-600 to-amber-400 rounded-3xl blur opacity-20 group-hover:opacity-30 transition duration-1000"></div>
+        {/* BOX FEEDBACKS */}
+        <div className="relative bg-zinc-900 border border-zinc-800 rounded-3xl p-6 md:p-8 min-h-[400px] overflow-hidden">
+          <h3 className="text-amber-500 font-bold text-sm md:text-base mb-4">
+            Arraste para o lado e veja os Feedbacks Reais:
+          </h3>
 
-        <div className="relative bg-zinc-900 border border-zinc-800 rounded-3xl p-6 md:p-8 min-h-[300px] md:min-h-[400px] overflow-hidden">
-
-          {/* TITULO */}
-          <div className="absolute top-4 left-4">
-            <h3 className="text-amber-500 font-bold text-sm md:text-base">
-              Arraste para o lado e veja os Feedbacks Reais:
-            </h3>
-          </div>
-
-          {/* SLIDER MANUAL */}
           <div
             id="feedback-scroll"
             onScroll={(e) => {
@@ -158,38 +162,91 @@ const Hero = () => {
               const width = e.currentTarget.offsetWidth;
               setCurrentSlide(Math.round(scrollLeft / width));
             }}
-            className="mt-10 flex overflow-x-auto snap-x snap-mandatory scroll-smooth scrollbar-hide"
+            className="flex overflow-x-auto snap-x snap-mandatory scroll-smooth scrollbar-hide"
           >
             {feedbackImages.map((img, i) => (
               <div
                 key={i}
-                className="min-w-full snap-center flex justify-center items-center px-2"
+                className="min-w-full snap-center flex justify-center px-2"
               >
                 <img
                   src={img}
-                  alt={`Feedback ${i + 1}`}
-                  className="rounded-2xl border border-zinc-800 object-cover max-h-[260px] md:max-h-[320px]"
+                  alt=""
+                  className="rounded-2xl border border-zinc-800 max-h-[300px] object-cover"
                 />
               </div>
             ))}
           </div>
 
-          {/* BOLINHAS */}
-          <div className="absolute bottom-8 left-0 right-0 flex justify-center gap-2">
+          <div className="absolute bottom-6 left-0 right-0 flex justify-center gap-2">
             {feedbackImages.map((_, i) => (
               <button
                 key={i}
-                onClick={() => {
-                  const el = document.getElementById("feedback-scroll");
-                  if (el) {
-                    el.scrollTo({
-                      left: el.clientWidth * i,
+                onClick={() =>
+                  document
+                    .getElementById("feedback-scroll")
+                    ?.scrollTo({
+                      left:
+                        document.getElementById("feedback-scroll")
+                          .clientWidth * i,
                       behavior: "smooth",
-                    });
-                  }
-                }}
-                className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                    })
+                }
+                className={`w-2 h-2 rounded-full ${
                   currentSlide === i
+                    ? "bg-amber-500 w-6"
+                    : "bg-zinc-700"
+                }`}
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* NOVA BOX EBOOK */}
+        <div className="relative bg-zinc-900 border border-zinc-800 rounded-3xl p-6 md:p-8 min-h-[400px] overflow-hidden">
+          <h3 className="text-amber-500 font-bold text-sm md:text-base mb-4">
+            Arraste para o lado e veja a prévia do e-book:
+          </h3>
+
+          <div
+            id="ebook-scroll"
+            onScroll={(e) => {
+              const scrollLeft = e.currentTarget.scrollLeft;
+              const width = e.currentTarget.offsetWidth;
+              setCurrentPreview(Math.round(scrollLeft / width));
+            }}
+            className="flex overflow-x-auto snap-x snap-mandatory scroll-smooth scrollbar-hide"
+          >
+            {ebookImages.map((img, i) => (
+              <div
+                key={i}
+                className="min-w-full snap-center flex justify-center px-2"
+              >
+                <img
+                  src={img}
+                  alt=""
+                  className="rounded-2xl border border-zinc-800 max-h-[300px] object-cover"
+                />
+              </div>
+            ))}
+          </div>
+
+          <div className="absolute bottom-6 left-0 right-0 flex justify-center gap-2">
+            {ebookImages.map((_, i) => (
+              <button
+                key={i}
+                onClick={() =>
+                  document
+                    .getElementById("ebook-scroll")
+                    ?.scrollTo({
+                      left:
+                        document.getElementById("ebook-scroll")
+                          .clientWidth * i,
+                      behavior: "smooth",
+                    })
+                }
+                className={`w-2 h-2 rounded-full ${
+                  currentPreview === i
                     ? "bg-amber-500 w-6"
                     : "bg-zinc-700"
                 }`}
