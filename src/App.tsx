@@ -125,13 +125,12 @@ const Hero = () => {
     "Filosofia",
     "Criminologia",
     "Antropologia",
-    "Sociologia",
     "História do Direito",
     "Civil I",
     "Penal I",
     "Constitucional I",
-    "TGP",
-    "Hermenêutica",
+    "Teoria Geral do Processo",
+    "Hermenêutica Jurídica",
   ].map((item, i) => (
     <span
       key={i}
