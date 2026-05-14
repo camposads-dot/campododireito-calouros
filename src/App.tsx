@@ -121,6 +121,7 @@ const Hero = () => {
   {[
     "Introdução ao Estudo do Direito",
     "Ciências Políticas",
+    "Teoria do Estado",
     "Filosofia",
     "Criminologia",
     "Antropologia",
