@@ -521,41 +521,41 @@ const ProductPreview = () => {
 
   const previewImages = [
     {
-      url: "/associacaocodigo.jpg",
+      url: "/associacaocodigo.png",
       title: "Associação com o Código",
     },
     {
-      url: "/espacodenotas.jpg",
+      url: "/espacodenotas.png",
       title: "Espaço de Notas",
     },
     {
-      url: "/planodeestudo.jpg",
+      url: "/planodeestudo.png",
       title: "Plano de Estudo",
     },
     {
-      url: "/simulado.jpg",
+      url: "/simulado.png",
       title: "Simulado de Prova",
     },
     {
-      url: "/sumariointerativo.jpg",
+      url: "/sumariointerativo.png",
       title: "Sumário Interativo",
     },
   ];
 
   const reviews = [
-  {
-    title: "Review E-book 1",
-    embed: "https://www.youtube.com/embed/0esmfaCBjOI",
-  },
-  {
-    title: "Review E-book 2",
-    embed: "https://www.youtube.com/embed/pzQFMvp9LRk",
-  },
-];
+    {
+      title: "Review E-book 1",
+      embed: "https://www.youtube.com/embed/0esmfaCBjOI",
+    },
+    {
+      title: "Review E-book 2",
+      embed: "https://www.youtube.com/embed/pzQFMvp9LRk",
+    },
+  ];
 
   return (
     <Section className="bg-zinc-950">
-      {/* CARROSSEL DAS FOTOS */}
+      {/* Carrossel das imagens */}
       <div className="mb-12 overflow-hidden">
         <motion.div
           className="flex gap-4 w-max"
@@ -585,31 +585,27 @@ const ProductPreview = () => {
         </motion.div>
       </div>
 
-      {/* REVIEWS YOUTUBE */}
+      {/* Reviews em vídeo */}
       <div className="grid sm:grid-cols-2 gap-8 max-w-4xl mx-auto">
-        {reviews.map((video, i) => (
-          <a
+        {reviews.map((review, i) => (
+          <div
             key={i}
-            href={video.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="aspect-video bg-zinc-900 rounded-3xl border border-zinc-800 flex items-center justify-center group cursor-pointer relative overflow-hidden"
+            className="aspect-video bg-zinc-900 rounded-3xl border border-zinc-800 overflow-hidden shadow-xl"
           >
-            <div className="absolute inset-0 bg-zinc-950/40 group-hover:bg-transparent transition-colors z-10" />
-
-            <div className="w-16 h-16 rounded-full bg-amber-500 text-zinc-950 flex items-center justify-center z-20 group-hover:scale-110 transition-transform">
-              <Zap size={32} />
-            </div>
-
-            <p className="absolute bottom-6 z-20 font-bold text-amber-500">
-              {video.title}
-            </p>
-          </a>
+            <iframe
+              className="w-full h-full"
+              src={review.embed}
+              title={review.title}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
         ))}
       </div>
     </Section>
   );
 };
+
 const Offer = () => {
   return (
     <Section id="pricing" className="relative">
@@ -886,11 +882,13 @@ const Biography = () => {
     <Section className="bg-zinc-900/40 rounded-[50px]">
       <div className="grid lg:grid-cols-2 gap-12 md:gap-20 items-center">
         <div className="relative aspect-square rounded-[60px] overflow-hidden bg-zinc-800 border-4 border-amber-500/20 max-w-md mx-auto">
-          <img
-  src="/perfil.png"
-  alt="Natan Campos"
-  className="w-full h-full object-cover"
-/>
+          <div className="w-40 h-40 md:w-56 md:h-56 rounded-full overflow-hidden">
+  <img
+    src="/perfil.png"
+    alt="Natan Campos"
+    className="w-full h-full object-cover object-center"
+  />
+</div>
           <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-transparent"></div>
           <div className="absolute bottom-8 left-8">
             <h3 className="text-3xl font-black text-white">Natan Campos</h3>
