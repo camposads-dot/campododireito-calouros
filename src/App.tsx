@@ -883,52 +883,72 @@ const Biography = () => {
   return (
     <Section className="bg-zinc-900/40 rounded-[50px]">
       <div className="grid lg:grid-cols-2 gap-12 md:gap-20 items-center">
+
+        {/* FOTO */}
         <div className="relative aspect-square rounded-[60px] overflow-hidden bg-zinc-800 border-4 border-amber-500/20 max-w-md mx-auto">
-          <div className="w-40 h-40 md:w-56 md:h-56 rounded-full overflow-hidden">
-  <img
-  src="/perfil.png"
-  alt="Natan Campos"
-  className="w-full h-full object-cover"
-/>
-</div>
+          <img
+            src="/perfil.png"
+            alt="Natan Campos"
+            className="w-full h-full object-cover"
+          />
+
           <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-transparent"></div>
+
           <div className="absolute bottom-8 left-8">
             <h3 className="text-3xl font-black text-white">Natan Campos</h3>
-            <p className="text-amber-500 font-bold uppercase tracking-widest text-xs">Mentor e Veterano em Direito</p>
+            <p className="text-amber-500 font-bold uppercase tracking-widest text-xs">
+              Mentor e Veterano em Direito
+            </p>
           </div>
         </div>
-        
+
+        {/* TEXTO */}
         <div className="text-center lg:text-left">
           <Badge>Abaixo do Juridiquês</Badge>
-          <h2 className="text-3xl md:text-5xl font-bold mb-6 md:mb-8 uppercase">OPA! MUITO PRAZER 👋</h2>
+
+          <h2 className="text-3xl md:text-5xl font-bold mb-6 md:mb-8 uppercase">
+            OPA! MUITO PRAZER 👋
+          </h2>
+
           <div className="space-y-6 text-lg md:text-xl text-zinc-400 leading-relaxed">
             <p>
-              Me chamo <span className="text-zinc-100 font-bold">Natan Campos.</span> Atualmente no 7º período de Direito, já ajudei mais de 400 calouros a dominarem a base do curso sem termos técnicos complicados.
+              Me chamo <span className="text-zinc-100 font-bold">Natan Campos.</span>
+              Atualmente no 7º período de Direito, já ajudei mais de 400 calouros a dominarem a base do curso sem termos técnicos complicados.
             </p>
+
             <p>
-              Minha missão é clara: <span className="text-amber-500 italic">economizar o seu tempo.</span> Estudei na PUC/RS e desenvolvi uma estratégia prática para você aprender em 7 dias o que a faculdade tenta ensinar em meses.
+              Minha missão é clara:
+              <span className="text-amber-500 italic"> economizar o seu tempo.</span>
+              Estudei na PUC/RS e desenvolvi uma estratégia prática para você aprender em 7 dias o que a faculdade tenta ensinar em meses.
             </p>
           </div>
-          
+
           <div className="mt-10 md:mt-12 grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
             <div className="p-5 md:p-6 rounded-3xl bg-zinc-950/50 border border-zinc-800 text-center">
               <p className="text-2xl md:text-3xl font-black text-amber-500 mb-1">400+</p>
-              <p className="text-[10px] md:text-xs text-zinc-500 uppercase font-bold tracking-widest leading-none">Alunos Satisfeitos</p>
+              <p className="text-[10px] md:text-xs text-zinc-500 uppercase font-bold tracking-widest leading-none">
+                Alunos Satisfeitos
+              </p>
             </div>
+
             <div className="p-5 md:p-6 rounded-3xl bg-zinc-950/50 border border-zinc-800 text-center">
               <a
-  href="https://instagram.com/nataneodireito"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="flex items-center justify-center gap-2 mb-1 hover:text-amber-500 transition-colors"
->
-  <Instagram size={18} className="text-amber-500" />
-  <p className="text-sm md:text-base font-bold">@nataneodireito</p>
-</a>
-              <p className="text-[10px] md:text-xs text-zinc-500 uppercase font-bold tracking-widest leading-none">Me siga no Instagram</p>
+                href="https://instagram.com/nataneodireito"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 mb-1 hover:text-amber-500 transition-colors"
+              >
+                <Instagram size={18} className="text-amber-500" />
+                <p className="text-sm md:text-base font-bold">@nataneodireito</p>
+              </a>
+
+              <p className="text-[10px] md:text-xs text-zinc-500 uppercase font-bold tracking-widest leading-none">
+                Me siga no Instagram
+              </p>
             </div>
           </div>
         </div>
+
       </div>
     </Section>
   );
