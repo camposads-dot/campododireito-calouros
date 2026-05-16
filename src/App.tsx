@@ -227,17 +227,19 @@ const Hero = () => {
     </CTAButton>
     
     {/* NORMAL */}
-    <CTAButton secondary className="flex-1">
-      <div className="flex flex-col items-start">
-        <span className="text-lg font-bold">
-          Apenas 1° Semestre
-        </span>
+<CTAButton secondary className="flex-1">
+  <div className="flex flex-col items-center">
+    
+    <span className="text-lg font-bold">
+      Apenas 1° Semestre
+    </span>
 
-        <span className="text-sm text-zinc-300 mt-1 w-full text-center">
-  R$ 27,90
-</span>
-      </div>
-    </CTAButton>
+    <span className="text-sm text-zinc-300 mt-1">
+      R$ 27,90
+    </span>
+
+  </div>
+</CTAButton>
 
   </div>
 </div>
