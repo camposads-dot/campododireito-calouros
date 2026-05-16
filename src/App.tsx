@@ -141,55 +141,68 @@ const Hero = () => {
   ))}
 </div>
 
-<div className="space-y-6 flex flex-col items-center lg:items-start">
+<div className="p-4 md:p-5 rounded-2xl bg-zinc-900/60 border border-zinc-800 inline-block w-full sm:w-auto backdrop-blur-sm">
 
-  {/* INFO */}
-  <div className="p-5 rounded-2xl bg-zinc-900/60 border border-zinc-800 inline-block w-full sm:w-auto backdrop-blur-sm">
-    
-  <p className="text-zinc-100 font-semibold text-sm md:text-base leading-relaxed">
+  {/* TÍTULO */}
+  <p className="text-zinc-100 font-semibold text-sm md:text-base leading-relaxed text-left">
     Garanta hoje seu combo com{" "}
     <span className="text-amber-400 font-extrabold">
       85% OFF + 04 bônus + 12 disciplinas completas.
     </span>
   </p>
 
-  <div className="mt-4 space-y-2 text-sm text-zinc-300">
+  {/* BENEFÍCIOS */}
+  <div className="mt-4 space-y-3 text-sm md:text-sm text-zinc-300">
 
-    <div className="flex items-center gap-2">
-      <span className="text-amber-400">✔</span>
-      <p>Esquemas simplificados para aprender mais rápido</p>
+    <div className="flex items-start gap-3">
+      <span className="text-amber-400 mt-[2px]">✔</span>
+      <p className="leading-snug">
+        Esquemas simplificados para aprender mais rápido
+      </p>
     </div>
 
-    <div className="flex items-center gap-2">
-      <span className="text-amber-400">✔</span>
-      <p>Exemplos práticos e associação com o Código</p>
+    <div className="flex items-start gap-3">
+      <span className="text-amber-400 mt-[2px]">✔</span>
+      <p className="leading-snug">
+        Exemplos práticos e associação com o Código
+      </p>
     </div>
 
-    <div className="flex items-center gap-2">
-      <span className="text-amber-400">✔</span>
-      <p>Plano de estudo incluso + simulados por disciplina</p>
+    <div className="flex items-start gap-3">
+      <span className="text-amber-400 mt-[2px]">✔</span>
+      <p className="leading-snug">
+        Plano de estudo incluso + simulados por disciplina
+      </p>
     </div>
 
-    <div className="flex items-center gap-2">
-      <span className="text-amber-400">✔</span>
-      <p>
+    <div className="flex items-start gap-3">
+      <span className="text-amber-400 mt-[2px]">✔</span>
+      <p className="leading-snug">
         Entrega imediata através de um link enviado para o e-mail informado na compra
       </p>
     </div>
 
   </div>
 
-    <div className="mt-4 flex items-center gap-2 bg-amber-500/10 border border-amber-500/20 px-3 py-2 rounded-full w-fit">
-      <span>🔥</span>
-      <p className="text-amber-300 text-xs font-medium">
+  {/* PROVA SOCIAL */}
+  <div className="mt-5">
+    <div className="inline-flex items-center gap-2 bg-amber-500/10 border border-amber-500/20 px-3 py-2 rounded-full max-w-full">
+      
+      <span className="text-sm">🔥</span>
+
+      <p className="text-amber-300 text-[11px] sm:text-xs font-medium leading-tight">
         +400 calouros já aprovaram esse material
       </p>
-    </div>
 
-    <p className="text-zinc-500 text-xs md:text-sm mt-4">
-      Pagamento único e 7 dias de garantia.
-    </p>
+    </div>
   </div>
+
+  {/* GARANTIA */}
+  <p className="text-zinc-500 text-xs text-center sm:text-left mt-4">
+    Pagamento único e 7 dias de garantia.
+  </p>
+
+</div>
 
   {/* BOTÕES */}
   <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
@@ -197,9 +210,9 @@ const Hero = () => {
     {/* COMBO */}
     <CTAButton className="flex-1 relative overflow-hidden group">
       
-      <div className="absolute top-2 right-2 bg-white text-black text-[10px] font-bold px-2 py-1 rounded-full">
-        MAIS ESCOLHIDO
-      </div>
+      <div className="absolute -top-2 right-3 bg-white text-black text-[9px] font-extrabold px-2 py-[3px] rounded-full shadow-sm">
+  MAIS ESCOLHIDO
+</div>
 
       <div className="flex flex-col items-start">
         <span className="text-lg font-extrabold">
@@ -207,7 +220,7 @@ const Hero = () => {
         </span>
 
         <span className="text-xs text-white/80 mt-1">
-          12 disciplinas + bônus exclusivos
+          12 disciplinas + 04 bônus exclusivos
         </span>
       </div>
 
@@ -220,9 +233,9 @@ const Hero = () => {
           Apenas 1° Semestre
         </span>
 
-        <span className="text-sm text-zinc-300 mt-1">
-          R$ 27,90
-        </span>
+        <span className="text-sm text-zinc-300 mt-1 w-full text-center">
+  R$ 27,90
+</span>
       </div>
     </CTAButton>
 
