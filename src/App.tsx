@@ -225,7 +225,7 @@ const Hero = () => {
       </div>
 
     </CTAButton>
-
+    
     {/* NORMAL */}
     <CTAButton secondary className="flex-1">
       <div className="flex flex-col items-start">
