@@ -210,7 +210,7 @@ const Hero = () => {
     {/* COMBO */}
     <CTAButton className="flex-1 relative overflow-hidden group">
       
-      <div className="absolute -top-2 right-3 bg-white text-black text-[9px] font-extrabold px-2 py-[3px] rounded-full shadow-sm">
+      <div className="absolute -top-2 right-3 bg-gradient-to-r from-white to-zinc-200 text-black text-[9px] font-extrabold px-2 py-[3px] rounded-full shadow-sm">
   MAIS ESCOLHIDO
 </div>
 
