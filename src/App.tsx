@@ -209,24 +209,19 @@ const Hero = () => {
 
     {/* COMBO */}
     <CTAButton className="flex-1 relative overflow-hidden group flex flex-col items-center justify-center text-center">
-  <div className="absolute -top-2 right-3 bg-gradient-to-r from-white to-zinc-200 text-black text-[9px] font-extrabold px-2 py-[3px] rounded-full shadow-sm">
-    MAIS ESCOLHIDO
+  <div className="absolute -top-2 right-3 bg-gradient-to-r from-white to-zinc-200 text-black text-[9px] font-extrabold px-2 py-[3px] rounded-full shadow-sm">MAIS ESCOLHIDO
   </div>
-  <span className="text-lg font-extrabold block">
-    Combo 1° + 2° Semestre
+  <span className="text-lg font-extrabold block">Combo 1° + 2° Semestre
   </span>
-  <span className="text-xs text-white/80 mt-1 block">
-    12 disciplinas + 04 bônus exclusivos
+  <span className="text-xs text-white/80 mt-1 block">12 disciplinas + 04 bônus exclusivos
   </span>
 
 </CTAButton>
     {/* NORMAL */}
 <CTAButton secondary className="flex-1 flex flex-col items-center justify-center text-center">
-  <span className="text-lg font-bold block">
-    Apenas 1° Semestre
+  <span className="text-lg font-bold block">Apenas 1° Semestre
   </span>
-  <span className="text-sm text-zinc-300 mt-1 block">
-    R$ 27,90
+  <span className="text-sm text-zinc-300 mt-1 block">R$ 27,90
   </span>
 </CTAButton>
 
