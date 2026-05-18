@@ -920,23 +920,27 @@ const Offer = () => {
           </CTAButton>
 
           {/* Botão WhatsApp */}
-          <a
-            href="https://wa.me/5569992294465?text=Olá!%20Tenho%20uma%20dúvida%20sobre%20o%20Combo%20Especial%202026."
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-full mt-4 flex items-center justify-center gap-2 rounded-2xl border border-zinc-700 bg-zinc-950/60 hover:bg-zinc-900 transition-all duration-300 py-4 text-sm md:text-base font-semibold text-zinc-200"
-          >
-            <MessageCircle
-              size={18}
-              className="text-emerald-500"
-            />
+<div className="flex justify-center">
+  <a
+    href="https://wa.me/5569992294465?text=Olá!%20Tenho%20uma%20dúvida%20sobre%20o%20Combo%20Especial%202026."
+    target="_blank"
+    rel="noopener noreferrer"
+    className="w-full md:w-[90%] mt-4 flex items-center justify-center text-center gap-2 rounded-2xl border border-zinc-700 bg-zinc-950/60 hover:bg-zinc-900 transition-all duration-300 py-4 px-4 text-sm md:text-base font-semibold text-zinc-200"
+  >
+    <MessageCircle
+      size={18}
+      className="text-emerald-500 flex-shrink-0"
+    />
 
-            Ainda com dúvidas? Me chame no WhatsApp
-          </a>
-          
-          <p className="text-center text-[8px] md:text-[10px] text-zinc-500 mt-4 uppercase font-bold tracking-widest">
-            Oferta por tempo limitado
-          </p>
+    <span className="leading-tight">
+      Ainda com dúvidas? Me chame no WhatsApp
+    </span>
+  </a>
+</div>
+
+<p className="text-center text-[8px] md:text-[10px] text-zinc-500 mt-4 uppercase font-bold tracking-widest">
+  Oferta por tempo limitado
+</p>
         </div>
       </div>
     </Section>
