@@ -101,14 +101,18 @@ const Hero = () => {
         transition={{ duration: 0.8 }}
         className="text-center lg:text-left"
       >
-        <Badge>Método Validado por +400 Calouros</Badge>
+        <span className="inline-block px-3 py-1 rounded-full bg-amber-500/10 text-amber-500 text-[10px] md:text-xs font-bold uppercase tracking-wider mb-6 border border-amber-500/20">
+  Método validado por +400 calouros
+</span>
 
-        <h1 className="text-4xl md:text-6xl font-black leading-[1.05] tracking-tight">
+        <h1 className="text-[2.7rem] md:text-6xl font-black leading-[1.05] tracking-tight text-center md:text-left">
+  Aprenda Direito
   <br />
-  da faculdade de Direito
+  sem ficar perdido
   <br />
-  <span className="text-amber-500 italic">
-    e aprenda mais rápido
+
+  <span className="text-amber-500 italic block mt-3">
+    no 1° e 2° semestre
   </span>
 </h1>
 
