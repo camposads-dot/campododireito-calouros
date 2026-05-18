@@ -256,27 +256,31 @@ const Hero = () => {
           </span>
 
           <span className="text-xs text-white/80 mt-2 block">
-            12 disciplinas + 04 bônus exclusivos
+            12 Disciplinas + 04 Bônus Exclusivos
           </span>
 
         </CTAButton>
 
         {/* NORMAL */}
-        <CTAButton
+<CTAButton
   secondary={true}
   href="#individual"
-  className="flex-1 flex flex-col items-center justify-center text-center min-h-[110px]"
+  className="flex-1 flex flex-col items-center justify-center text-center min-h-[110px] scroll-smooth"
 >
 
-          <span className="text-lg font-bold block leading-tight">
-            Apenas 1° Semestre - 5 Disciplinas + 02 Bônus Exclusivos
-          </span>
+  <span className="text-lg font-bold block leading-tight">
+    Apenas 1° Semestre
+  </span>
 
-          <span className="text-sm text-zinc-300 mt-2 block">
-            R$ 37,90
-          </span>
+  <span className="text-sm text-zinc-400 mt-1 block">
+    5 Disciplinas + 02 Bônus Exclusivos
+  </span>
 
-        </CTAButton>
+  <span className="text-base text-zinc-200 mt-3 font-semibold block">
+    R$ 37,90
+  </span>
+
+</CTAButton>
 
       </div>
 
