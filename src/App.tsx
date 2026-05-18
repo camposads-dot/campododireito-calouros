@@ -150,6 +150,27 @@ const Hero = () => {
       ))}
     </div>
 
+    {/* VÍDEO YOUTUBE - MOBILE */}
+<div className="w-full mt-2 lg:hidden">
+
+  <p className="text-amber-500 text-xs md:text-sm font-bold uppercase tracking-widest mb-4 text-center">
+    Assista e conheça o material de estudo
+  </p>
+
+  <div className="w-full rounded-3xl overflow-hidden border border-zinc-800 bg-zinc-900 shadow-xl">
+    <div className="aspect-video">
+      <iframe
+        className="w-full h-full"
+        src="https://www.youtube.com/embed/PbOzmQFBgU8?si=c8ymorxtK93UOHpN"
+        title="Conheça o Material"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+      ></iframe>
+    </div>
+  </div>
+
+</div>
+
     <div className="space-y-6 flex flex-col items-center lg:items-start">
 
       {/* CARD INFO */}
@@ -269,6 +290,27 @@ const Hero = () => {
         transition={{ duration: 0.8, delay: 0.2 }}
         className="relative space-y-8"
       >
+
+        {/* VÍDEO YOUTUBE - DESKTOP */}
+<div className="hidden lg:block mb-8">
+
+  <p className="text-amber-500 text-sm font-bold uppercase tracking-widest mb-4">
+    Assista e conheça o material de estudo
+  </p>
+
+  <div className="rounded-3xl overflow-hidden border border-zinc-800 bg-zinc-900 shadow-xl">
+    <div className="aspect-video">
+      <iframe
+        className="w-full h-full"
+        src="https://www.youtube.com/embed/PbOzmQFBgU8?si=c8ymorxtK93UOHpN"
+        title="Conheça o Material"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+      ></iframe>
+    </div>
+  </div>
+
+</div>
         {/* BOX FEEDBACKS */}
         <div className="relative bg-zinc-900 border border-zinc-800 rounded-3xl p-6 md:p-8 min-h-[400px] overflow-hidden">
           <h3 className="text-amber-500 font-bold text-sm md:text-base mb-4">
