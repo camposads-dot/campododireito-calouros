@@ -776,6 +776,11 @@ const ProductPreview = () => {
     </Section>
   );
 };
+import { 
+  CheckCircle2,
+  MessageCircle
+} from 'lucide-react';
+
 const Offer = () => {
   return (
     <Section id="pricing" className="relative">
@@ -784,28 +789,55 @@ const Offer = () => {
       <div className="text-center mb-12 md:mb-16">
         <Badge>A Hora é Agora</Badge>
         <h2 className="text-3xl md:text-5xl font-bold mb-4">Escolha seu acesso:</h2>
-        <p className="text-sm md:text-base text-zinc-500">Invista agora e garanta sua vantagem competitiva desde o 1º dia.</p>
+        <p className="text-sm md:text-base text-zinc-500">
+          Invista agora e garanta sua vantagem competitiva desde o 1º dia.
+        </p>
       </div>
       
       <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto items-stretch">
+        
         {/* Individual */}
         <div className="p-6 md:p-12 rounded-[32px] md:rounded-[40px] bg-zinc-900 border border-zinc-800 flex flex-col justify-between">
           <div>
-            <h3 className="text-xl md:text-2xl font-bold mb-2">E-Book Semestre 1</h3>
-            <p className="text-zinc-500 text-xs md:text-sm mb-6 font-medium">Aprenda os primeiros 6 meses de Direito em 7 dias!</p>
+            <h3 className="text-xl md:text-2xl font-bold mb-2">
+              E-Book Semestre 1
+            </h3>
+
+            <p className="text-zinc-500 text-xs md:text-sm mb-6 font-medium">
+              Aprenda os primeiros 6 meses de Direito em 7 dias!
+            </p>
             
             <div className="mb-6 md:mb-8 p-4 md:p-6 rounded-2xl bg-zinc-950/50 border border-zinc-800">
-              <p className="text-zinc-500 line-through text-xs md:text-sm">de R$ 67,90</p>
+              <p className="text-zinc-500 line-through text-xs md:text-sm">
+                de R$ 67,90
+              </p>
+
               <div className="flex items-baseline gap-2">
-                <span className="text-xs md:text-sm font-bold text-amber-500">por R$</span>
-                <span className="text-4xl md:text-5xl font-black text-zinc-100">27,90</span>
+                <span className="text-xs md:text-sm font-bold text-amber-500">
+                  por R$
+                </span>
+
+                <span className="text-4xl md:text-5xl font-black text-zinc-100">
+                  27,90
+                </span>
               </div>
             </div>
             
             <ul className="space-y-3 md:space-y-4 mb-8 md:mb-10">
-              {["Introdução ao Estudo do Direito", "Ciências Políticas, Estado e Constituição", "Criminologia, Antropologia, História do Direito", "+ 2 Bônus Exclusivos"].map((item, i) => (
-                <li key={i} className="flex items-center gap-3 text-zinc-400 text-xs md:text-sm">
-                  <CheckCircle2 size={16} className="text-emerald-500 flex-shrink-0" />
+              {[
+                "Introdução ao Estudo do Direito",
+                "Ciências Políticas, Estado e Constituição",
+                "Criminologia, Antropologia, História do Direito",
+                "+ 2 Bônus Exclusivos"
+              ].map((item, i) => (
+                <li
+                  key={i}
+                  className="flex items-center gap-3 text-zinc-400 text-xs md:text-sm"
+                >
+                  <CheckCircle2
+                    size={16}
+                    className="text-emerald-500 flex-shrink-0"
+                  />
                   {item}
                 </li>
               ))}
@@ -813,47 +845,98 @@ const Offer = () => {
           </div>
           
           <CTAButton
-  secondary
-  href="https://pay.cakto.com.br/mecgdur"
-  className="w-full"
->
-  COMPRAR INDIVIDUAL
-</CTAButton>
+            secondary
+            href="https://pay.cakto.com.br/mecgdur"
+            className="w-full"
+          >
+            COMPRAR INDIVIDUAL
+          </CTAButton>
         </div>
 
         {/* Combo */}
         <div className="p-6 md:p-12 rounded-[32px] md:rounded-[40px] bg-zinc-900 border-2 border-amber-500 relative overflow-hidden shadow-[0_0_50px_rgba(217,119,6,0.15)] order-first md:order-last">
+          
           <div className="absolute top-0 right-0 px-4 md:px-6 py-1 md:py-2 bg-amber-500 text-zinc-950 font-bold text-[10px] md:text-xs uppercase tracking-widest rounded-bl-xl md:rounded-bl-2xl">
             Mais Vendido
           </div>
           
           <div>
             <div className="mb-2">
-              <h3 className="text-2xl md:text-3xl font-black text-gold-gradient">COMBO ESPECIAL 2026</h3>
+              <h3 className="text-2xl md:text-3xl font-black text-gold-gradient">
+                COMBO ESPECIAL 2026
+              </h3>
             </div>
-            <p className="text-zinc-500 text-xs md:text-sm mb-6 md:mb-8 font-medium">E-Book 1 + E-Book 2 + 4 Bônus - com 12 Disciplinas</p>
+
+            <p className="text-zinc-500 text-xs md:text-sm mb-6 md:mb-8 font-medium">
+              E-Book 1 + E-Book 2 + 4 Bônus - com 12 Disciplinas
+            </p>
             
             <div className="mb-6 md:mb-8 p-4 md:p-6 rounded-2xl md:rounded-3xl bg-amber-500 text-zinc-950">
-              <p className="text-zinc-900/60 line-through text-xs md:text-sm font-bold">De R$ 157,90</p>
+              <p className="text-zinc-900/60 line-through text-xs md:text-sm font-bold">
+                De R$ 157,90
+              </p>
+
               <div className="flex items-baseline gap-2">
-                <span className="text-xs md:text-sm font-bold">por R$</span>
-                <span className="text-5xl md:text-6xl font-black">47,90</span>
+                <span className="text-xs md:text-sm font-bold">
+                  por R$
+                </span>
+
+                <span className="text-5xl md:text-6xl font-black">
+                  47,90
+                </span>
               </div>
             </div>
             
             <div className="grid grid-cols-2 gap-y-3 md:gap-y-4 gap-x-2 mb-8 md:mb-10">
-              {["Esquemas Simplificados", "Exemplos Práticos", "Associação com o Código", "Espaço para anotações", "Plano de Estudo incluso", "Simulado por disciplina"].map((item, i) => (
-                <div key={i} className="flex items-center gap-2 text-zinc-200 text-[10px] md:text-xs font-medium">
-                  <CheckCircle2 size={14} className="text-zinc-950" fill="#f59e0b" />
+              {[
+                "Esquemas Simplificados",
+                "Exemplos Práticos",
+                "Associação com o Código",
+                "Espaço para anotações",
+                "Plano de Estudo incluso",
+                "Simulado por disciplina"
+              ].map((item, i) => (
+                <div
+                  key={i}
+                  className="flex items-center gap-2 text-zinc-200 text-[10px] md:text-xs font-medium"
+                >
+                  <CheckCircle2
+                    size={14}
+                    className="text-zinc-950"
+                    fill="#f59e0b"
+                  />
                   {item}
                 </div>
               ))}
             </div>
           </div>
           
-          <CTAButton  href="https://pay.cakto.com.br/33wuu35"  className="w-full text-lg md:text-xl py-5 md:py-6">  GARANTIR COMBO COMPLETO</CTAButton>
+          {/* Botão principal */}
+          <CTAButton
+            href="https://pay.cakto.com.br/33wuu35"
+            className="w-full text-lg md:text-xl py-5 md:py-6"
+          >
+            GARANTIR COMBO COMPLETO
+          </CTAButton>
+
+          {/* Botão WhatsApp */}
+          <a
+            href="https://wa.me/5569992294465?text=Olá!%20Tenho%20uma%20dúvida%20sobre%20o%20Combo%20Especial%202026."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full mt-4 flex items-center justify-center gap-2 rounded-2xl border border-zinc-700 bg-zinc-950/60 hover:bg-zinc-900 transition-all duration-300 py-4 text-sm md:text-base font-semibold text-zinc-200"
+          >
+            <MessageCircle
+              size={18}
+              className="text-emerald-500"
+            />
+
+            Ainda com dúvidas? Me chame no WhatsApp
+          </a>
           
-          <p className="text-center text-[8px] md:text-[10px] text-zinc-500 mt-4 uppercase font-bold tracking-widest">Oferta por tempo limitado</p>
+          <p className="text-center text-[8px] md:text-[10px] text-zinc-500 mt-4 uppercase font-bold tracking-widest">
+            Oferta por tempo limitado
+          </p>
         </div>
       </div>
     </Section>
