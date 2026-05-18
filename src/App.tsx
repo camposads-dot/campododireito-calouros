@@ -263,7 +263,7 @@ const Hero = () => {
 
         {/* NORMAL */}
         <CTAButton
-  secondary
+  secondary={true}
   href="#individual"
   className="flex-1 flex flex-col items-center justify-center text-center min-h-[110px]"
 >
