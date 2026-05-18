@@ -103,12 +103,15 @@ const Hero = () => {
       >
         <Badge>Método Validado por +400 Calouros</Badge>
 
-        <h1 className="text-3xl md:text-6xl font-extrabold leading-tight md:leading-tight mb-6">
-          Aprenda o primeiro ano da faculdade de Direito em{" "}
-          <span className="text-gold-gradient italic">
-            menos de 30 dias!
-          </span>
-        </h1>
+        <h1 className="text-5xl md:text-7xl font-black leading-tight tracking-tight">
+  Pare de sofrer no início
+  <br />
+  da faculdade de Direito
+  <br />
+  <span className="text-amber-500 italic">
+    e aprenda mais rápido
+  </span>
+</h1>
 
         <p className="text-lg md:text-xl text-zinc-400 mb-8 max-w-xl mx-auto lg:mx-0">
   Entenda o 1° ano de Direito com o método aprovado por +400
@@ -1226,7 +1229,7 @@ const Footer = () => {
 export default function App() {
   return (
     <div className="selection:bg-amber-500 selection:text-zinc-950 overflow-x-hidden max-w-full">
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-zinc-950/80 backdrop-blur-md border-b border-zinc-900 px-4 md:px-6 py-4 overflow-x-hidden">
+      <nav className="fixed top-4 left-1/2 -translate-x-1/2 w-[95%] max-w-7xl z-50 bg-zinc-950/80 backdrop-blur-md border border-zinc-800 rounded-2xl px-4 md:px-6 py-4 shadow-[0_0_30px_rgba(0,0,0,0.4)] overflow-x-hidden">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <div className="flex items-center gap-2 min-w-0">
             <div className="w-8 h-8 bg-amber-500 rounded-lg flex items-center justify-center text-zinc-950 font-black italic shrink-0">
