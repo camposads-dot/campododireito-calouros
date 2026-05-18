@@ -849,64 +849,64 @@ const Offer = () => {
       <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto items-stretch">
         
         {/* Individual */}
-        <div
+<div
   id="individual"
   className="p-6 md:p-12 rounded-[32px] md:rounded-[40px] bg-zinc-900 border border-zinc-800 flex flex-col justify-between"
 >
-            <h3 className="text-xl md:text-2xl font-bold mb-2">
-              E-Book Semestre 1
-            </h3>
+  <div>
+    <h3 className="text-xl md:text-2xl font-bold mb-2">
+      E-Book Semestre 1
+    </h3>
 
-            <p className="text-zinc-500 text-xs md:text-sm mb-6 font-medium">
-              Aprenda os primeiros 6 meses de Direito em 7 dias!
-            </p>
-            
-            <div className="mb-6 md:mb-8 p-4 md:p-6 rounded-2xl bg-zinc-950/50 border border-zinc-800">
-              <p className="text-zinc-500 line-through text-xs md:text-sm">
-                de R$ 97,90
-              </p>
+    <p className="text-zinc-500 text-xs md:text-sm mb-6 font-medium">
+      Aprenda os primeiros 6 meses de Direito em 7 dias!
+    </p>
+    
+    <div className="mb-6 md:mb-8 p-4 md:p-6 rounded-2xl bg-zinc-950/50 border border-zinc-800">
+      <p className="text-zinc-500 line-through text-xs md:text-sm">
+        de R$ 97,90
+      </p>
 
-              <div className="flex items-baseline gap-2">
-                <span className="text-xs md:text-sm font-bold text-amber-500">
-                  por R$
-                </span>
+      <div className="flex items-baseline gap-2">
+        <span className="text-xs md:text-sm font-bold text-amber-500">
+          por R$
+        </span>
 
-                <span className="text-4xl md:text-5xl font-black text-zinc-100">
-                  37,90
-                </span>
-              </div>
-            </div>
-            
-            <ul className="space-y-3 md:space-y-4 mb-8 md:mb-10">
-              {[
-                "Introdução ao Estudo do Direito",
-                "Ciências Políticas, Estado e Constituição",
-                "Criminologia, Antropologia, História do Direito",
-                "+ 2 Bônus Exclusivos"
-              ].map((item, i) => (
-                <li
-                  key={i}
-                  className="flex items-center gap-3 text-zinc-400 text-xs md:text-sm"
-                >
-                  <CheckCircle2
-                    size={16}
-                    className="text-emerald-500 flex-shrink-0"
-                  />
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
-          
-          <CTAButton
-            secondary
-            href="https://pay.cakto.com.br/mecgdur"
-            className="w-full"
-          >
-            COMPRAR INDIVIDUAL
-          </CTAButton>
-        </div>
+        <span className="text-4xl md:text-5xl font-black text-zinc-100">
+          37,90
+        </span>
+      </div>
+    </div>
+    
+    <ul className="space-y-3 md:space-y-4 mb-8 md:mb-10">
+      {[
+        "Introdução ao Estudo do Direito",
+        "Ciências Políticas, Estado e Constituição",
+        "Criminologia, Antropologia, História do Direito",
+        "+ 2 Bônus Exclusivos"
+      ].map((item, i) => (
+        <li
+          key={i}
+          className="flex items-center gap-3 text-zinc-400 text-xs md:text-sm"
+        >
+          <CheckCircle2
+            size={16}
+            className="text-emerald-500 flex-shrink-0"
+          />
+          {item}
+        </li>
+      ))}
+    </ul>
+  </div>
 
+  <CTAButton
+    secondary
+    href="https://pay.cakto.com.br/mecgdur"
+    className="w-full"
+  >
+    COMPRAR INDIVIDUAL
+  </CTAButton>
+</div>
         {/* Combo */}
         <div className="p-6 md:p-12 rounded-[32px] md:rounded-[40px] bg-zinc-900 border-2 border-amber-500 relative overflow-hidden shadow-[0_0_50px_rgba(217,119,6,0.15)] order-first md:order-last">
           
