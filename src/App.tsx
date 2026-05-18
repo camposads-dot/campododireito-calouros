@@ -103,8 +103,7 @@ const Hero = () => {
       >
         <Badge>Método Validado por +400 Calouros</Badge>
 
-        <h1 className="text-5xl md:text-7xl font-black leading-tight tracking-tight">
-  Pare de sofrer no início
+        <h1 className="text-4xl md:text-6xl font-black leading-[1.05] tracking-tight">
   <br />
   da faculdade de Direito
   <br />
@@ -1229,36 +1228,7 @@ const Footer = () => {
 export default function App() {
   return (
     <div className="selection:bg-amber-500 selection:text-zinc-950 overflow-x-hidden max-w-full">
-      <nav className="fixed top-4 left-1/2 -translate-x-1/2 w-[95%] max-w-7xl z-50 bg-zinc-950/80 backdrop-blur-md border border-zinc-800 rounded-2xl px-4 md:px-6 py-4 shadow-[0_0_30px_rgba(0,0,0,0.4)] overflow-x-hidden">
-        <div className="max-w-7xl mx-auto flex justify-between items-center">
-          <div className="flex items-center gap-2 min-w-0">
-            <div className="w-8 h-8 bg-amber-500 rounded-lg flex items-center justify-center text-zinc-950 font-black italic shrink-0">
-              D
-            </div>
-
-            <span className="text-lg font-black tracking-tighter hidden sm:block truncate">
-              DIREITO SIMPLIFICADO
-            </span>
-          </div>
-
-          <div className="flex items-center gap-2 md:gap-4">
-            <a
-              href="#faq"
-              className="text-sm font-bold text-zinc-500 hover:text-zinc-300 transition-colors hidden sm:block"
-            >
-              Dúvidas?
-            </a>
-
-            <CTAButton
-              href="#pricing"
-              className="px-4 md:px-6 py-2 text-xs md:text-sm rounded-lg whitespace-nowrap"
-            >
-              Comprar Agora
-            </CTAButton>
-          </div>
-        </div>
-      </nav>
-
+    
       <Hero />
       <Problem />
       <Solution />
