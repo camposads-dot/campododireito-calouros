@@ -91,173 +91,176 @@ const Hero = () => {
   const [currentPreview, setCurrentPreview] = useState(0);
 
   return (
-    <Section className="relative pt-24 md:pt-40 grid lg:grid-cols-2 gap-12 items-center overflow-hidden">
-      <div className="absolute top-0 left-1/4 -translate-x-1/2 w-[500px] h-[500px] bg-amber-600/10 blur-[120px] -z-10 rounded-full" />
+    <Section className="relative pt-12 md:pt-24 grid lg:grid-cols-2 gap-8 md:gap-12 items-center overflow-hidden">
+  <div className="absolute top-0 left-1/4 -translate-x-1/2 w-[500px] h-[500px] bg-amber-600/10 blur-[120px] -z-10 rounded-full" />
 
-      {/* ESQUERDA */}
-      <motion.div
-        initial={{ opacity: 0, x: -20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.8 }}
-        className="text-center lg:text-left"
-      >
-        <span className="inline-block px-3 py-1 rounded-full bg-amber-500/10 text-amber-500 text-[10px] md:text-xs font-bold uppercase tracking-wider mb-6 border border-amber-500/20">
-  Método validado por +400 calouros
-</span>
+  {/* ESQUERDA */}
+  <motion.div
+    initial={{ opacity: 0, x: -20 }}
+    animate={{ opacity: 1, x: 0 }}
+    transition={{ duration: 0.8 }}
+    className="text-center lg:text-left"
+  >
 
-        <h1 className="text-[2.7rem] md:text-6xl font-black leading-[1.05] tracking-tight text-center md:text-left">
-  Aprenda Direito
-  <br />
-  sem ficar perdido
-  <br />
-
-  <span className="text-amber-500 italic block mt-3">
-    no 1° e 2° semestre
-  </span>
-</h1>
-
-        <p className="text-lg md:text-xl text-zinc-400 mb-8 max-w-xl mx-auto lg:mx-0">
-  Entenda o 1° ano de Direito com o método aprovado por +400
-  calouros, um método direto e sem juridiquês para quem quer começar
-  o Direito com clareza, segurança e vantagem.
-</p>
-
-{/* DISCIPLINAS */}
-<div className="flex flex-wrap justify-center lg:justify-start gap-1.5 mb-6 max-w-xl mx-auto">
-  {[
-    "Introdução ao Estudo do Direito",
-    "Ciências Políticas",
-    "Teoria do Estado",
-    "Filosofia",
-    "Criminologia",
-    "Antropologia",
-    "História do Direito",
-    "Civil I",
-    "Penal I",
-    "Constitucional I",
-    "Teoria Geral do Processo",
-    "Hermenêutica Jurídica",
-  ].map((item, i) => (
-    <span
-      key={i}
-      className="px-2.5 py-1 rounded-full bg-zinc-900/80 border border-zinc-800 text-zinc-500 text-[10px] md:text-xs hover:border-amber-500/30 transition"
-    >
-      {item}
+    {/* BADGE */}
+    <span className="inline-block px-3 py-1 rounded-full bg-amber-500/10 text-amber-500 text-[10px] md:text-xs font-bold uppercase tracking-wider mb-5 border border-amber-500/20">
+      Método validado por +400 calouros
     </span>
-  ))}
-</div>
-
-<div className="space-y-6 flex flex-col items-center lg:items-start">
-
-  {/* CARD INFO */}
-  <div className="p-4 md:p-5 rounded-2xl bg-zinc-900/60 border border-zinc-800 w-full backdrop-blur-sm">
 
     {/* TÍTULO */}
-    <p className="text-zinc-100 font-semibold text-sm md:text-base leading-relaxed text-left">
-      Garanta hoje seu combo com{" "}
-      <span className="text-amber-400 font-extrabold">
-        85% OFF + 04 bônus + 12 disciplinas completas.
+    <h1 className="text-[2.2rem] md:text-5xl font-black leading-[1.1] tracking-tight text-center md:text-left">
+      Aprenda Direito
+      <br />
+      sem ficar perdido
+
+      <span className="text-amber-500 italic block mt-4">
+        no 1° e 2° semestre
       </span>
+    </h1>
+
+    {/* SUBTÍTULO */}
+    <p className="text-base md:text-lg text-zinc-400 mt-6 mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+      Entenda o 1° e 2 semestre de Direito com o método aprovado por +400
+      calouros, um método direto e sem juridiquês para quem quer começar
+      o Direito com clareza, segurança e vantagem.
     </p>
 
-    {/* BENEFÍCIOS */}
-    <div className="mt-4 space-y-3 text-sm text-zinc-300">
+    {/* DISCIPLINAS */}
+    <div className="flex flex-wrap justify-center lg:justify-start gap-1.5 mb-6 max-w-xl mx-auto lg:mx-0">
+      {[
+        "Introdução ao Estudo do Direito",
+        "Ciências Políticas",
+        "Teoria do Estado",
+        "Filosofia",
+        "Criminologia",
+        "Antropologia",
+        "História do Direito",
+        "Civil I",
+        "Penal I",
+        "Constitucional I",
+        "Teoria Geral do Processo",
+        "Hermenêutica Jurídica",
+      ].map((item, i) => (
+        <span
+          key={i}
+          className="px-2.5 py-1 rounded-full bg-zinc-900/80 border border-zinc-800 text-zinc-500 text-[10px] md:text-xs hover:border-amber-500/30 transition"
+        >
+          {item}
+        </span>
+      ))}
+    </div>
 
-      <div className="flex items-start gap-2">
-        <span className="text-amber-400 mt-[2px] shrink-0">✔</span>
+    <div className="space-y-6 flex flex-col items-center lg:items-start">
 
-        <p className="leading-snug text-left">
-          Esquemas simplificados para aprender mais rápido
+      {/* CARD INFO */}
+      <div className="p-4 md:p-5 rounded-2xl bg-zinc-900/60 border border-zinc-800 w-full backdrop-blur-sm">
+
+        {/* TÍTULO */}
+        <p className="text-zinc-100 font-semibold text-sm md:text-base leading-relaxed text-left">
+          Garanta hoje seu combo com{" "}
+          <span className="text-amber-400 font-extrabold">
+            85% OFF + 04 bônus + 12 disciplinas completas.
+          </span>
         </p>
+
+        {/* BENEFÍCIOS */}
+        <div className="mt-4 space-y-3 text-sm text-zinc-300">
+
+          <div className="flex items-start gap-2">
+            <span className="text-amber-400 mt-[2px] shrink-0">✔</span>
+
+            <p className="leading-snug text-left">
+              Esquemas simplificados para aprender mais rápido
+            </p>
+          </div>
+
+          <div className="flex items-start gap-2">
+            <span className="text-amber-400 mt-[2px] shrink-0">✔</span>
+
+            <p className="leading-snug text-left">
+              Exemplos práticos e associação com o Código
+            </p>
+          </div>
+
+          <div className="flex items-start gap-2">
+            <span className="text-amber-400 mt-[2px] shrink-0">✔</span>
+
+            <p className="leading-snug text-left">
+              Plano de estudo incluso + simulados por disciplina
+            </p>
+          </div>
+
+          <div className="flex items-start gap-2">
+            <span className="text-amber-400 mt-[2px] shrink-0">✔</span>
+
+            <p className="leading-snug text-left">
+              Entrega imediata através de um link enviado para o e-mail informado na compra
+            </p>
+          </div>
+
+        </div>
+
+        {/* PROVA SOCIAL */}
+        <div className="mt-5">
+          <div className="inline-flex items-center gap-2 bg-amber-500/10 border border-amber-500/20 px-3 py-2 rounded-full">
+
+            <span className="text-sm">🔥</span>
+
+            <p className="text-amber-300 text-[11px] sm:text-xs font-medium leading-tight">
+              +400 calouros já aprovaram esse material
+            </p>
+
+          </div>
+        </div>
+
+        {/* GARANTIA */}
+        <p className="text-zinc-500 text-xs text-center sm:text-left mt-4">
+          Pagamento único e 7 dias de garantia.
+        </p>
+
       </div>
 
-      <div className="flex items-start gap-2">
-        <span className="text-amber-400 mt-[2px] shrink-0">✔</span>
+      {/* BOTÕES */}
+      <div className="flex flex-col sm:flex-row gap-4 w-full">
 
-        <p className="leading-snug text-left">
-          Exemplos práticos e associação com o Código
-        </p>
-      </div>
+        {/* COMBO */}
+        <CTAButton className="flex-1 relative overflow-hidden group flex flex-col items-center justify-center text-center min-h-[110px]">
 
-      <div className="flex items-start gap-2">
-        <span className="text-amber-400 mt-[2px] shrink-0">✔</span>
+          <div className="absolute top-2 right-2 bg-white text-black text-[8px] sm:text-[9px] font-extrabold px-2 py-1 rounded-full shadow-sm whitespace-nowrap">
+            MAIS ESCOLHIDO
+          </div>
 
-        <p className="leading-snug text-left">
-          Plano de estudo incluso + simulados por disciplina
-        </p>
-      </div>
+          <span className="text-lg font-extrabold block leading-tight">
+            Combo 1° + 2° Semestre
+          </span>
 
-      <div className="flex items-start gap-2">
-        <span className="text-amber-400 mt-[2px] shrink-0">✔</span>
+          <span className="text-xs text-white/80 mt-2 block">
+            12 disciplinas + 04 bônus exclusivos
+          </span>
 
-        <p className="leading-snug text-left">
-          Entrega imediata através de um link enviado para o e-mail informado na compra
-        </p>
+        </CTAButton>
+
+        {/* NORMAL */}
+        <CTAButton
+          secondary
+          className="flex-1 flex flex-col items-center justify-center text-center min-h-[110px]"
+        >
+
+          <span className="text-lg font-bold block leading-tight">
+            Apenas 1° Semestre
+          </span>
+
+          <span className="text-sm text-zinc-300 mt-2 block">
+            R$ 27,90
+          </span>
+
+        </CTAButton>
+
       </div>
 
     </div>
 
-    {/* PROVA SOCIAL */}
-    <div className="mt-5">
-      <div className="inline-flex items-center gap-2 bg-amber-500/10 border border-amber-500/20 px-3 py-2 rounded-full">
-
-        <span className="text-sm">🔥</span>
-
-        <p className="text-amber-300 text-[11px] sm:text-xs font-medium leading-tight">
-          +400 calouros já aprovaram esse material
-        </p>
-
-      </div>
-    </div>
-
-    {/* GARANTIA */}
-    <p className="text-zinc-500 text-xs text-center sm:text-left mt-4">
-      Pagamento único e 7 dias de garantia.
-    </p>
-
-  </div>
-
-  {/* BOTÕES */}
-  <div className="flex flex-col sm:flex-row gap-4 w-full">
-
-    {/* COMBO */}
-    <CTAButton className="flex-1 relative overflow-hidden group flex flex-col items-center justify-center text-center min-h-[110px]">
-
-      <div className="absolute top-2 right-2 bg-white text-black text-[8px] sm:text-[9px] font-extrabold px-2 py-1 rounded-full shadow-sm whitespace-nowrap">
-      MAIS ESCOLHIDO
-      </div>
-
-      <span className="text-lg font-extrabold block leading-tight">
-        Combo 1° + 2° Semestre
-      </span>
-
-      <span className="text-xs text-white/80 mt-2 block">
-        12 disciplinas + 04 bônus exclusivos
-      </span>
-
-    </CTAButton>
-
-    {/* NORMAL */}
-    <CTAButton
-      secondary
-      className="flex-1 flex flex-col items-center justify-center text-center min-h-[110px]"
-    >
-
-      <span className="text-lg font-bold block leading-tight">
-        Apenas 1° Semestre
-      </span>
-
-      <span className="text-sm text-zinc-300 mt-2 block">
-        R$ 27,90
-      </span>
-
-    </CTAButton>
-
-  </div>
-
-</div>
-
-</motion.div>
+  </motion.div>
 
       {/* DIREITA */}
       <motion.div
