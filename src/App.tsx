@@ -263,16 +263,17 @@ const Hero = () => {
 
         {/* NORMAL */}
         <CTAButton
-          secondary
-          className="flex-1 flex flex-col items-center justify-center text-center min-h-[110px]"
-        >
+  secondary
+  href="#individual"
+  className="flex-1 flex flex-col items-center justify-center text-center min-h-[110px]"
+>
 
           <span className="text-lg font-bold block leading-tight">
-            Apenas 1° Semestre
+            Apenas 1° Semestre - 5 Disciplinas + 02 Bônus Exclusivos
           </span>
 
           <span className="text-sm text-zinc-300 mt-2 block">
-            R$ 27,90
+            R$ 37,90
           </span>
 
         </CTAButton>
@@ -838,7 +839,7 @@ const Offer = () => {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-amber-600/5 blur-[150px] -z-10 rounded-full" />
       
       <div className="text-center mb-12 md:mb-16">
-        <Badge>A Hora é Agora</Badge>
+        <Badge>Esoclha seu material de estudo</Badge>
         <h2 className="text-3xl md:text-5xl font-bold mb-4">Escolha seu acesso:</h2>
         <p className="text-sm md:text-base text-zinc-500">
           Invista agora e garanta sua vantagem competitiva desde o 1º dia.
@@ -848,8 +849,10 @@ const Offer = () => {
       <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto items-stretch">
         
         {/* Individual */}
-        <div className="p-6 md:p-12 rounded-[32px] md:rounded-[40px] bg-zinc-900 border border-zinc-800 flex flex-col justify-between">
-          <div>
+        <div
+  id="individual"
+  className="p-6 md:p-12 rounded-[32px] md:rounded-[40px] bg-zinc-900 border border-zinc-800 flex flex-col justify-between"
+>
             <h3 className="text-xl md:text-2xl font-bold mb-2">
               E-Book Semestre 1
             </h3>
@@ -860,7 +863,7 @@ const Offer = () => {
             
             <div className="mb-6 md:mb-8 p-4 md:p-6 rounded-2xl bg-zinc-950/50 border border-zinc-800">
               <p className="text-zinc-500 line-through text-xs md:text-sm">
-                de R$ 67,90
+                de R$ 97,90
               </p>
 
               <div className="flex items-baseline gap-2">
@@ -869,7 +872,7 @@ const Offer = () => {
                 </span>
 
                 <span className="text-4xl md:text-5xl font-black text-zinc-100">
-                  27,90
+                  37,90
                 </span>
               </div>
             </div>
@@ -933,7 +936,7 @@ const Offer = () => {
                 </span>
 
                 <span className="text-5xl md:text-6xl font-black">
-                  47,90
+                  57,90
                 </span>
               </div>
             </div>
@@ -1040,7 +1043,7 @@ const PriceReasoning = () => {
       <div className="grid items-center lg:grid-cols-2 gap-8 md:gap-12 max-w-5xl mx-auto">
         <div className="p-8 md:p-12 rounded-[32px] md:rounded-[40px] bg-gold-gradient text-zinc-950 text-center shadow-2xl">
             <p className="font-bold text-xs md:text-sm uppercase mb-1 md:mb-2">O valor de</p>
-            <h3 className="text-5xl md:text-7xl font-black mb-3 md:mb-4">R$ 47,90</h3>
+            <h3 className="text-5xl md:text-7xl font-black mb-3 md:mb-4">R$ 57,90</h3>
             <p className="font-bold text-zinc-950/70 text-sm md:text-base">não é aleatório.</p>
         </div>
         
