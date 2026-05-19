@@ -837,6 +837,52 @@ import {
   MessageCircle
 } from 'lucide-react';
 
+const VideoFeedback = () => {
+  return (
+    <Section className="bg-zinc-950/60 relative overflow-hidden">
+      
+      {/* Glow */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-amber-600/10 blur-[120px] rounded-full -z-10" />
+
+      <div className="max-w-4xl mx-auto text-center">
+
+        <Badge>
+          Feedback Real
+        </Badge>
+
+        <h2 className="text-3xl md:text-5xl font-bold mb-4">
+          Feedback Real e{" "}
+          <span className="text-amber-500">
+            Alerta contra Golpes
+          </span>
+        </h2>
+
+        <p className="text-zinc-400 mb-10 text-base md:text-lg">
+          Assiste esse feedback e tire suas conclusões
+        </p>
+
+        {/* VIDEO */}
+        <div className="max-w-[360px] mx-auto rounded-3xl overflow-hidden border border-zinc-800 bg-zinc-900 shadow-xl">
+          <div className="aspect-[9/16]">
+            <iframe
+              className="w-full h-full"
+              src="https://www.youtube.com/embed/HkFy9iBS5Gc?si=cIHtbZ7GlO96O9yc"
+              title="Feedback Real"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
+        </div>
+
+        <p className="text-xs md:text-sm text-zinc-500 mt-8 italic max-w-md mx-auto">
+          Esse é um relato real de aluno. Veja antes de decidir sua compra.
+        </p>
+
+      </div>
+    </Section>
+  );
+};
+
 const Offer = () => {
   return (
     <Section id="pricing" className="relative">
@@ -1290,8 +1336,10 @@ export default function App() {
       <Solution />
       <Bonuses />
       <SocialProof />
+      <VideoFeedback />
       <TargetAudience />
       <ProductPreview />
+      <VideoFeedback />
       <Offer />
       <Summary />
       <PriceReasoning />
