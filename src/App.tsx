@@ -268,7 +268,6 @@ const Hero = () => {
     </div>
 
   </div>
-</div>
 
       {/* BOTÕES */}
       <div className="flex flex-col sm:flex-row gap-4 w-full">
