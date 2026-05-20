@@ -194,14 +194,14 @@ const Hero = () => {
 
     {/* TÍTULO */}
 <div className="text-center sm:text-left">
-  <p className="text-zinc-100 font-bold text-base md:text-lg leading-snug">
+  <p className="text-zinc-100 font-bold text-base md:text-lg leading-snug max-w-[320px] sm:max-w-none mx-auto sm:mx-0">
     Garanta hoje seu{" "}
     <span className="text-amber-400 font-extrabold">
       atalho para entender Direito desde o primeiro semestre.
     </span>
   </p>
 
-  <p className="text-zinc-500 text-xs md:text-sm mt-2">
+  <p className="text-zinc-500 text-xs md:text-sm mt-2 max-w-[300px] sm:max-w-none mx-auto sm:mx-0">
     Tudo que um calouro precisava para começar com clareza e confiança.
   </p>
 </div>
@@ -218,13 +218,13 @@ const Hero = () => {
   ].map((item, i) => (
     <div
       key={i}
-      className="flex items-start gap-3 bg-zinc-950/40 border border-zinc-800 rounded-2xl p-3"
+      className="flex items-center sm:items-start gap-3 bg-zinc-950/40 border border-zinc-800 rounded-2xl p-3 text-center sm:text-left"
     >
-      <div className="w-5 h-5 rounded-full bg-amber-500/15 flex items-center justify-center shrink-0 mt-[2px]">
+      <div className="w-5 h-5 rounded-full bg-amber-500/15 flex items-center justify-center shrink-0">
         <span className="text-amber-400 text-[11px]">✔</span>
       </div>
 
-      <p className="text-sm text-zinc-300 leading-relaxed text-left">
+      <p className="text-sm text-zinc-300 leading-relaxed flex-1">
         {item}
       </p>
     </div>
@@ -235,11 +235,11 @@ const Hero = () => {
 {/* PROVA SOCIAL */}
 <div className="mt-6 flex justify-center sm:justify-start">
 
-  <div className="inline-flex items-center gap-2 bg-amber-500/10 border border-amber-500/20 px-4 py-3 rounded-2xl max-w-full">
+  <div className="inline-flex items-center justify-center sm:justify-start gap-2 bg-amber-500/10 border border-amber-500/20 px-4 py-3 rounded-2xl max-w-[340px] sm:max-w-full text-center sm:text-left">
 
-    <span className="text-base">🔥</span>
+    <span className="text-base shrink-0">🔥</span>
 
-    <p className="text-amber-300 text-xs sm:text-sm font-medium leading-relaxed text-left">
+    <p className="text-amber-300 text-xs sm:text-sm font-medium leading-relaxed">
       Mais de 400 calouros já começaram Direito com mais clareza usando esse método.
     </p>
 
