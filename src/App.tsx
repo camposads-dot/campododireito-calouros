@@ -248,17 +248,17 @@ const Hero = () => {
 </div>
 
 {/* GARANTIA */}
-<div className="mt-5 flex flex-wrap justify-center sm:justify-start gap-2 text-[11px] sm:text-xs">
+<div className="mt-5 flex flex-wrap items-center justify-center gap-2 text-[11px] sm:text-xs w-full">
 
-  <div className="bg-zinc-900 border border-zinc-800 rounded-full px-3 py-2 text-zinc-400">
+  <div className="flex items-center justify-center bg-zinc-900 border border-zinc-800 rounded-full px-3 py-2 text-zinc-400 text-center">
     ✔ Pagamento único
   </div>
 
-  <div className="bg-zinc-900 border border-zinc-800 rounded-full px-3 py-2 text-zinc-400">
+  <div className="flex items-center justify-center bg-zinc-900 border border-zinc-800 rounded-full px-3 py-2 text-zinc-400 text-center">
     ✔ Acesso imediato
   </div>
 
-  <div className="bg-zinc-900 border border-zinc-800 rounded-full px-3 py-2 text-zinc-400">
+  <div className="flex items-center justify-center bg-zinc-900 border border-zinc-800 rounded-full px-3 py-2 text-zinc-400 text-center">
     ✔ Garantia de 7 dias
   </div>
 
