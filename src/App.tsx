@@ -177,69 +177,169 @@ const Hero = () => {
       <div className="p-4 md:p-5 rounded-2xl bg-zinc-900/60 border border-zinc-800 w-full backdrop-blur-sm">
 
         {/* TÍTULO */}
-        <p className="text-zinc-100 font-semibold text-sm md:text-base leading-relaxed text-left">
-          Garanta hoje seu combo com{" "}
-          <span className="text-amber-400 font-extrabold">
-            85% OFF + 04 bônus + 12 disciplinas completas.
-          </span>
+<h1 className="text-[2.2rem] md:text-5xl font-black leading-[1.05] tracking-tight text-center md:text-left">
+  Pare de entrar nas aulas
+  <br />
+  sem entender nada
+
+  <span className="text-amber-500 italic block mt-4">
+    no 1° e 2° semestre
+  </span>
+</h1>
+
+{/* SUBTÍTULO */}
+<p className="text-base md:text-lg text-zinc-400 mt-6 mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+  Aprenda as disciplinas mais importantes do 1° e 2° semestre de Direito
+  de forma simples e estratégica — mesmo começando do zero.
+  <br />
+  <br />
+  O método que já ajudou +400 calouros a entrarem na faculdade com mais
+  clareza, segurança e confiança.
+</p>
+
+{/* MOCKUP SECTION */}
+<div className="mb-8">
+
+  <p className="text-amber-500 text-xs md:text-sm font-bold uppercase tracking-widest mb-4 text-center lg:text-left">
+    Tudo que você precisa para dominar o início do Direito
+  </p>
+
+  <div className="relative rounded-3xl border border-zinc-800 bg-zinc-900/60 backdrop-blur-sm overflow-hidden p-4 md:p-6">
+
+    {/* IMAGEM MOCKUP */}
+    <div className="relative flex items-center justify-center">
+
+      <img
+        src="/mockup-livros.png"
+        alt="Mockup dos materiais de Direito"
+        className="w-full max-w-[520px] object-contain"
+      />
+
+    </div>
+
+    {/* TEXTO */}
+    <div className="mt-5 text-center lg:text-left">
+
+      <p className="text-zinc-200 font-semibold text-sm md:text-base leading-relaxed">
+        Acesso imediato às{" "}
+        <span className="text-amber-400 font-extrabold">
+          12 disciplinas + 4 bônus exclusivos
+        </span>
+      </p>
+
+      <p className="text-zinc-500 text-xs md:text-sm mt-2 leading-relaxed">
+        O atalho que todo calouro gostaria de ter antes da primeira aula.
+      </p>
+
+    </div>
+
+  </div>
+
+</div>
+
+{/* VÍDEO YOUTUBE - MOBILE */}
+<div className="w-full mt-2 lg:hidden">
+
+  <p className="text-amber-500 text-xs md:text-sm font-bold uppercase tracking-widest mb-4 text-center">
+    Tudo que um calouro de Direito precisava ter aprendido antes da faculdade
+  </p>
+
+  <div className="w-full rounded-3xl overflow-hidden border border-zinc-800 bg-zinc-900 shadow-xl">
+    <div className="aspect-video">
+      <iframe
+        className="w-full h-full"
+        src="https://www.youtube.com/embed/PbOzmQFBgU8?si=c8ymorxtK93UOHpN"
+        title="Conheça o Material"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+      ></iframe>
+    </div>
+  </div>
+
+</div>
+
+<div className="space-y-6 flex flex-col items-center lg:items-start">
+
+  {/* CARD INFO */}
+  <div className="p-4 md:p-5 rounded-2xl bg-zinc-900/60 border border-zinc-800 w-full backdrop-blur-sm">
+
+    {/* TÍTULO */}
+    <p className="text-zinc-100 font-semibold text-sm md:text-base leading-relaxed text-left">
+      Garanta hoje seu{" "}
+      <span className="text-amber-400 font-extrabold">
+        atalho para entender Direito desde o primeiro semestre.
+      </span>
+    </p>
+
+    {/* BENEFÍCIOS */}
+    <div className="mt-4 space-y-3 text-sm text-zinc-300">
+
+      <div className="flex items-start gap-2">
+        <span className="text-amber-400 mt-[2px] shrink-0">✔</span>
+
+        <p className="leading-snug text-left">
+          Explicações simples para finalmente entender o “juridiquês”
         </p>
+      </div>
 
-        {/* BENEFÍCIOS */}
-        <div className="mt-4 space-y-3 text-sm text-zinc-300">
+      <div className="flex items-start gap-2">
+        <span className="text-amber-400 mt-[2px] shrink-0">✔</span>
 
-          <div className="flex items-start gap-2">
-            <span className="text-amber-400 mt-[2px] shrink-0">✔</span>
+        <p className="leading-snug text-left">
+          Esquemas visuais para aprender mais rápido e revisar com facilidade
+        </p>
+      </div>
 
-            <p className="leading-snug text-left">
-              Esquemas simplificados para aprender mais rápido
-            </p>
-          </div>
+      <div className="flex items-start gap-2">
+        <span className="text-amber-400 mt-[2px] shrink-0">✔</span>
 
-          <div className="flex items-start gap-2">
-            <span className="text-amber-400 mt-[2px] shrink-0">✔</span>
+        <p className="leading-snug text-left">
+          Exemplos práticos conectados ao Código e à realidade da faculdade
+        </p>
+      </div>
 
-            <p className="leading-snug text-left">
-              Exemplos práticos e associação com o Código
-            </p>
-          </div>
+      <div className="flex items-start gap-2">
+        <span className="text-amber-400 mt-[2px] shrink-0">✔</span>
 
-          <div className="flex items-start gap-2">
-            <span className="text-amber-400 mt-[2px] shrink-0">✔</span>
+        <p className="leading-snug text-left">
+          Plano de estudo pronto + simulados para acelerar seu aprendizado
+        </p>
+      </div>
 
-            <p className="leading-snug text-left">
-              Plano de estudo incluso + simulados por disciplina
-            </p>
-          </div>
+      <div className="flex items-start gap-2">
+        <span className="text-amber-400 mt-[2px] shrink-0">✔</span>
 
-          <div className="flex items-start gap-2">
-            <span className="text-amber-400 mt-[2px] shrink-0">✔</span>
+        <p className="leading-snug text-left">
+          Acesso imediato no e-mail logo após a compra
+        </p>
+      </div>
 
-            <p className="leading-snug text-left">
-              Entrega imediata através de um link enviado para o e-mail informado na compra
-            </p>
-          </div>
+    </div>
 
-        </div>
+    {/* PROVA SOCIAL */}
+    <div className="mt-5">
+      <div className="inline-flex items-center gap-2 bg-amber-500/10 border border-amber-500/20 px-3 py-2 rounded-full">
 
-        {/* PROVA SOCIAL */}
-        <div className="mt-5">
-          <div className="inline-flex items-center gap-2 bg-amber-500/10 border border-amber-500/20 px-3 py-2 rounded-full">
+        <span className="text-sm">🔥</span>
 
-            <span className="text-sm">🔥</span>
-
-            <p className="text-amber-300 text-[11px] sm:text-xs font-medium leading-tight">
-              +400 calouros já aprovaram esse material
-            </p>
-
-          </div>
-        </div>
-
-        {/* GARANTIA */}
-        <p className="text-zinc-500 text-xs text-center sm:text-left mt-4">
-          Pagamento único e 7 dias de garantia.
+        <p className="text-amber-300 text-[11px] sm:text-xs font-medium leading-tight">
+          Mais de 400 calouros já começaram Direito com mais clareza usando esse método.
         </p>
 
       </div>
+    </div>
+
+    {/* GARANTIA */}
+    <div className="mt-4 flex flex-wrap gap-3 text-xs text-zinc-500">
+
+      <span>✔ Pagamento único</span>
+      <span>✔ Acesso imediato</span>
+      <span>✔ Garantia de 7 dias</span>
+
+    </div>
+
+  </div>
+</div>
 
       {/* BOTÕES */}
       <div className="flex flex-col sm:flex-row gap-4 w-full">
