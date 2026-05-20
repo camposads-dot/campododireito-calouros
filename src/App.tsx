@@ -167,7 +167,7 @@ const Hero = () => {
 </div>
 
 {/* VÍDEO YOUTUBE - MOBILE */}
-<div className="w-full mt-2 lg:hidden">
+<div className="w-full mt-2 mb-8 lg:hidden">
 
   <p className="text-amber-500 text-xs md:text-sm font-bold uppercase tracking-widest mb-4 text-center">
     Tudo que um calouro de Direito precisava ter aprendido antes da faculdade
