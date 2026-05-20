@@ -298,27 +298,27 @@ const Hero = () => {
 </div>
 
 {/* BOTÕES */}
-<div className="flex flex-col sm:flex-row gap-4 w-full">
+<div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full">
 
   {/* COMBO */}
-<CTAButton
-  className="flex-1 relative overflow-hidden group flex flex-col items-center justify-center text-center min-h-[145px] px-5 py-6"
->
+  <CTAButton
+    className="flex-1 relative overflow-hidden group flex flex-col items-center justify-center text-center min-h-[125px] sm:min-h-[145px] px-4 sm:px-5 py-5 sm:py-6"
+  >
 
     {/* BADGE */}
-    <div className="absolute top-3 right-3 bg-white text-black text-[9px] font-extrabold px-2.5 py-1 rounded-full shadow-sm whitespace-nowrap">
+    <div className="absolute top-2.5 right-2.5 bg-white text-black text-[8px] sm:text-[9px] font-extrabold px-2 py-1 rounded-full shadow-sm whitespace-nowrap">
       MAIS ESCOLHIDO
     </div>
 
     {/* TITULO */}
-    <span className="text-xl font-black leading-tight">
+    <span className="text-[1.1rem] sm:text-xl font-black leading-tight">
       Comece Direito
       <br />
       sem ficar perdido
     </span>
 
     {/* SUB */}
-    <span className="text-sm text-white/80 mt-3 leading-relaxed max-w-[240px]">
+    <span className="text-[13px] sm:text-sm text-white/80 mt-2.5 sm:mt-3 leading-relaxed max-w-[240px]">
       Acesso completo ao método com{" "}
       <span className="font-bold text-amber-200">
         12 disciplinas + 4 bônus
@@ -326,20 +326,20 @@ const Hero = () => {
     </span>
 
     {/* PREÇO */}
-    <div className="mt-4 flex items-end gap-2">
+    <div className="mt-3 sm:mt-4 flex items-end gap-2">
 
-      <span className="text-sm text-white/50 line-through">
+      <span className="text-xs sm:text-sm text-white/50 line-through">
         R$ 197
       </span>
 
-      <span className="text-3xl font-black leading-none">
+      <span className="text-[1.8rem] sm:text-3xl font-black leading-none">
         R$ 57,90
       </span>
 
     </div>
 
     {/* CTA MINI */}
-    <span className="mt-2 text-[11px] text-amber-100 font-medium">
+    <span className="mt-1.5 sm:mt-2 text-[10px] sm:text-[11px] text-amber-100 font-medium">
       Pagamento único • Acesso imediato
     </span>
 
@@ -349,29 +349,29 @@ const Hero = () => {
   <CTAButton
     secondary={true}
     href="#individual"
-    className="flex-1 flex flex-col items-center justify-center text-center min-h-[135px] px-5 scroll-smooth"
+    className="flex-1 flex flex-col items-center justify-center text-center min-h-[120px] sm:min-h-[135px] px-4 sm:px-5 py-5 scroll-smooth"
   >
 
     {/* TITULO */}
-    <span className="text-lg font-bold leading-tight">
+    <span className="text-base sm:text-lg font-bold leading-tight">
       Quero apenas
       <br />
       o 1° semestre
     </span>
 
     {/* SUB */}
-    <span className="text-sm text-zinc-400 mt-3 leading-relaxed max-w-[220px]">
+    <span className="text-[13px] sm:text-sm text-zinc-400 mt-2.5 sm:mt-3 leading-relaxed max-w-[220px]">
       5 disciplinas + 2 bônus essenciais para começar
     </span>
 
     {/* PREÇO */}
-    <span className="text-2xl text-zinc-100 mt-4 font-black">
+    <span className="text-xl sm:text-2xl text-zinc-100 mt-3 sm:mt-4 font-black">
       R$ 37,90
     </span>
 
     {/* INFO */}
-    <span className="text-[11px] text-zinc-500 mt-2">
-      Ideal para quem quer estudar somente a parte teórica no 1° período
+    <span className="text-[10px] sm:text-[11px] text-zinc-500 mt-1.5 sm:mt-2">
+      Ideal para quem quer estudar somente a teoria do 1° período
     </span>
 
   </CTAButton>
