@@ -193,81 +193,76 @@ const Hero = () => {
   <div className="p-4 md:p-5 rounded-2xl bg-zinc-900/60 border border-zinc-800 w-full backdrop-blur-sm">
 
     {/* TÍTULO */}
-    <p className="text-zinc-100 font-semibold text-sm md:text-base leading-relaxed text-left">
-      Garanta hoje seu{" "}
-      <span className="text-amber-400 font-extrabold">
-        atalho para entender Direito desde o primeiro semestre.
-      </span>
+<div className="text-center sm:text-left">
+  <p className="text-zinc-100 font-bold text-base md:text-lg leading-snug">
+    Garanta hoje seu{" "}
+    <span className="text-amber-400 font-extrabold">
+      atalho para entender Direito desde o primeiro semestre.
+    </span>
+  </p>
+
+  <p className="text-zinc-500 text-xs md:text-sm mt-2">
+    Tudo que um calouro precisava para começar com clareza e confiança.
+  </p>
+</div>
+
+{/* BENEFÍCIOS */}
+<div className="mt-5 space-y-3">
+
+  {[
+    "Explicações simples para finalmente entender o juridiquês",
+    "Esquemas visuais para aprender mais rápido",
+    "Exemplos práticos conectados ao Código",
+    "Plano de estudo + simulados inclusos",
+    "Acesso imediato logo após a compra",
+  ].map((item, i) => (
+    <div
+      key={i}
+      className="flex items-start gap-3 bg-zinc-950/40 border border-zinc-800 rounded-2xl p-3"
+    >
+      <div className="w-5 h-5 rounded-full bg-amber-500/15 flex items-center justify-center shrink-0 mt-[2px]">
+        <span className="text-amber-400 text-[11px]">✔</span>
+      </div>
+
+      <p className="text-sm text-zinc-300 leading-relaxed text-left">
+        {item}
+      </p>
+    </div>
+  ))}
+
+</div>
+
+{/* PROVA SOCIAL */}
+<div className="mt-6 flex justify-center sm:justify-start">
+
+  <div className="inline-flex items-center gap-2 bg-amber-500/10 border border-amber-500/20 px-4 py-3 rounded-2xl max-w-full">
+
+    <span className="text-base">🔥</span>
+
+    <p className="text-amber-300 text-xs sm:text-sm font-medium leading-relaxed text-left">
+      Mais de 400 calouros já começaram Direito com mais clareza usando esse método.
     </p>
 
-    {/* BENEFÍCIOS */}
-    <div className="mt-4 space-y-3 text-sm text-zinc-300">
-
-      <div className="flex items-start gap-2">
-        <span className="text-amber-400 mt-[2px] shrink-0">✔</span>
-
-        <p className="leading-snug text-left">
-          Explicações simples para finalmente entender o “juridiquês”
-        </p>
-      </div>
-
-      <div className="flex items-start gap-2">
-        <span className="text-amber-400 mt-[2px] shrink-0">✔</span>
-
-        <p className="leading-snug text-left">
-          Esquemas visuais para aprender mais rápido e revisar com facilidade
-        </p>
-      </div>
-
-      <div className="flex items-start gap-2">
-        <span className="text-amber-400 mt-[2px] shrink-0">✔</span>
-
-        <p className="leading-snug text-left">
-          Exemplos práticos conectados ao Código e à realidade da faculdade
-        </p>
-      </div>
-
-      <div className="flex items-start gap-2">
-        <span className="text-amber-400 mt-[2px] shrink-0">✔</span>
-
-        <p className="leading-snug text-left">
-          Plano de estudo pronto + simulados para acelerar seu aprendizado
-        </p>
-      </div>
-
-      <div className="flex items-start gap-2">
-        <span className="text-amber-400 mt-[2px] shrink-0">✔</span>
-
-        <p className="leading-snug text-left">
-          Acesso imediato no e-mail logo após a compra
-        </p>
-      </div>
-
-    </div>
-
-    {/* PROVA SOCIAL */}
-    <div className="mt-5">
-      <div className="inline-flex items-center gap-2 bg-amber-500/10 border border-amber-500/20 px-3 py-2 rounded-full">
-
-        <span className="text-sm">🔥</span>
-
-        <p className="text-amber-300 text-[11px] sm:text-xs font-medium leading-tight">
-          Mais de 400 calouros já começaram Direito com mais clareza usando esse método.
-        </p>
-
-      </div>
-    </div>
-
-    {/* GARANTIA */}
-    <div className="mt-4 flex flex-wrap gap-3 text-xs text-zinc-500">
-
-      <span>✔ Pagamento único</span>
-      <span>✔ Acesso imediato</span>
-      <span>✔ Garantia de 7 dias</span>
-
-    </div>
-
   </div>
+
+</div>
+
+{/* GARANTIA */}
+<div className="mt-5 flex flex-wrap justify-center sm:justify-start gap-2 text-[11px] sm:text-xs">
+
+  <div className="bg-zinc-900 border border-zinc-800 rounded-full px-3 py-2 text-zinc-400">
+    ✔ Pagamento único
+  </div>
+
+  <div className="bg-zinc-900 border border-zinc-800 rounded-full px-3 py-2 text-zinc-400">
+    ✔ Acesso imediato
+  </div>
+
+  <div className="bg-zinc-900 border border-zinc-800 rounded-full px-3 py-2 text-zinc-400">
+    ✔ Garantia de 7 dias
+  </div>
+
+</div>
 
       {/* BOTÕES */}
       <div className="flex flex-col sm:flex-row gap-4 w-full">
