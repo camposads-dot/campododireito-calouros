@@ -140,7 +140,7 @@ const Hero = () => {
     <div className="relative flex items-center justify-center">
 
       <img
-        src="/mockupsite.png"
+        src="/mockupof.png"
         alt="Mockup dos materiais de Direito"
         className="w-full max-w-[520px] object-contain"
       />
