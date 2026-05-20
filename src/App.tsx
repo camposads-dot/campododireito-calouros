@@ -137,7 +137,6 @@ const Hero = () => {
 
   <div className="relative rounded-3xl border border-zinc-800 bg-zinc-900/60 backdrop-blur-sm overflow-hidden p-4 md:p-6">
 
-    {/* IMAGEM MOCKUP */}
     <div className="relative flex items-center justify-center">
 
       <img
@@ -148,7 +147,6 @@ const Hero = () => {
 
     </div>
 
-    {/* TEXTO */}
     <div className="mt-5 text-center lg:text-left">
 
       <p className="text-zinc-200 font-semibold text-sm md:text-base leading-relaxed">
