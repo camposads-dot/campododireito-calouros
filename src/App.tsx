@@ -297,49 +297,86 @@ const Hero = () => {
 
 </div>
 
-      {/* BOTÕES */}
-      <div className="flex flex-col sm:flex-row gap-4 w-full">
+{/* BOTÕES */}
+<div className="flex flex-col sm:flex-row gap-4 w-full">
 
-        {/* COMBO */}
-        <CTAButton className="flex-1 relative overflow-hidden group flex flex-col items-center justify-center text-center min-h-[110px]">
-
-          <div className="absolute top-2 right-2 bg-white text-black text-[8px] sm:text-[9px] font-extrabold px-2 py-1 rounded-full shadow-sm whitespace-nowrap">
-            MAIS ESCOLHIDO
-          </div>
-
-          <span className="text-lg font-extrabold block leading-tight">
-            Combo 1° + 2° Semestre
-          </span>
-
-          <span className="text-xs text-white/80 mt-2 block">
-            12 Disciplinas + 04 Bônus Exclusivos
-          </span>
-
-        </CTAButton>
-
-        {/* NORMAL */}
+  {/* COMBO */}
 <CTAButton
-  secondary={true}
-  href="#individual"
-  className="flex-1 flex flex-col items-center justify-center text-center min-h-[110px] scroll-smooth"
+  className="flex-1 relative overflow-hidden group flex flex-col items-center justify-center text-center min-h-[145px] px-5 py-6"
 >
 
-  <span className="text-lg font-bold block leading-tight">
-    Apenas 1° Semestre
-  </span>
+    {/* BADGE */}
+    <div className="absolute top-3 right-3 bg-white text-black text-[9px] font-extrabold px-2.5 py-1 rounded-full shadow-sm whitespace-nowrap">
+      MAIS ESCOLHIDO
+    </div>
 
-  <span className="text-sm text-zinc-400 mt-1 block">
-    5 Disciplinas + 02 Bônus Exclusivos
-  </span>
+    {/* TITULO */}
+    <span className="text-xl font-black leading-tight">
+      Comece Direito
+      <br />
+      sem ficar perdido
+    </span>
 
-  <span className="text-base text-zinc-200 mt-3 font-semibold block">
-    R$ 37,90
-  </span>
+    {/* SUB */}
+    <span className="text-sm text-white/80 mt-3 leading-relaxed max-w-[240px]">
+      Acesso completo ao método com{" "}
+      <span className="font-bold text-amber-200">
+        12 disciplinas + 4 bônus
+      </span>
+    </span>
 
-</CTAButton>
+    {/* PREÇO */}
+    <div className="mt-4 flex items-end gap-2">
 
-      </div>
+      <span className="text-sm text-white/50 line-through">
+        R$ 197
+      </span>
 
+      <span className="text-3xl font-black leading-none">
+        R$ 57,90
+      </span>
+
+    </div>
+
+    {/* CTA MINI */}
+    <span className="mt-2 text-[11px] text-amber-100 font-medium">
+      Pagamento único • Acesso imediato
+    </span>
+
+  </CTAButton>
+
+  {/* NORMAL */}
+  <CTAButton
+    secondary={true}
+    href="#individual"
+    className="flex-1 flex flex-col items-center justify-center text-center min-h-[135px] px-5 scroll-smooth"
+  >
+
+    {/* TITULO */}
+    <span className="text-lg font-bold leading-tight">
+      Quero apenas
+      <br />
+      o 1° semestre
+    </span>
+
+    {/* SUB */}
+    <span className="text-sm text-zinc-400 mt-3 leading-relaxed max-w-[220px]">
+      5 disciplinas + 2 bônus essenciais para começar
+    </span>
+
+    {/* PREÇO */}
+    <span className="text-2xl text-zinc-100 mt-4 font-black">
+      R$ 37,90
+    </span>
+
+    {/* INFO */}
+    <span className="text-[11px] text-zinc-500 mt-2">
+      Ideal para quem quer estudar somente a parte teórica no 1° período
+    </span>
+
+  </CTAButton>
+
+</div>
     </div>
 
   </motion.div>
